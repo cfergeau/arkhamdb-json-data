@@ -389,8 +389,10 @@ def check_translations(args, base_translations_path, locale_name):
     verbose_print(args, "Loading Translations for %s...\n" % locale_name, 1)
     translations_path = os.path.join(base_translations_path, locale_name)
     check_translations_simple(args, base_translations_path, locale_name, 'cycles')
+    check_translations_simple(args, base_translations_path, locale_name, 'encounters')
     check_translations_simple(args, base_translations_path, locale_name, 'factions')
     check_translations_simple(args, base_translations_path, locale_name, 'packs')
+    check_translations_simple(args, base_translations_path, locale_name, 'subtypes')
     check_translations_simple(args, base_translations_path, locale_name, 'types')
     check_translations_packs(args, base_translations_path, locale_name)
 
