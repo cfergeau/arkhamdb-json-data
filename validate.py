@@ -139,6 +139,16 @@ def load_factions(args):
 
     return factions_data
 
+def load_subtypes(args):
+    verbose_print(args, "Loading subtype index file...\n", 1)
+    subtypes_path = os.path.join(args.base_path, "subtypes.json")
+    subtypes_data = load_json_file(args, subtypes_path)
+
+    if not validate_subtypes(args, subtypes_data):
+        return None
+
+    return subtypes_data
+
 def load_types(args):
     verbose_print(args, "Loading type index file...\n", 1)
     types_path = os.path.join(args.base_path, "types.json")
@@ -375,6 +385,167 @@ def check_translations_simple(args, base_translations_path, locale_name, base_fi
     if check_file_access(file_path):
         load_json_file(args, file_path)
 
+class i18nStats(object):
+    def __init__(self, locale, file_name):
+        self.locale = locale
+        self.file_name = file_name
+        self.translated = 0
+        self.untranslated = {}
+        self.missing = {}
+
+    def print(self, args):
+        verbose_print(args, "%s: %s\n"%(self.locale, self.file_name), 0)
+        verbose_print(args, "%s: translated: %d untranslated: %d\n"%(self.locale, self.translated, len(self.untranslated)), 0)
+        if len(self.untranslated) != 0:
+            verbose_print(args, "%s: untranslated: %s\n"%(self.locale, self.untranslated), 1)
+        if len (self.missing) != 0:
+            verbose_print(args, "%s: missing from translated file: %s\n"%(self.locale, self.missing), 0)
+
+    def print_short(self, args):
+        if self.translated == self.total:
+            return
+        path = os.path.join("translations", self.locale, self.file_name)
+        verbose_print(args, "%s (%d / %d)\n"%(path, self.translated, self.total), 0)
+
+
+
+def get_translatable_strings(args, item, file_path="", warn_if_extra=True):
+    translatable_fields = {'flavor', 'name', 'subname', 'customization_text', 'customization_change', 'text', 'traits', 'back_name', 'back_flavor', 'back_text', 'back_traits', 'slot'}
+    result = {}
+
+    if warn_if_extra:
+        extra = set(item).difference(translatable_fields, {'code'})
+        if len(extra) != 0:
+            verbose_print(args, "WARN: extra entries in %s: %s\n"%(file_path, extra), 0)
+
+    for field in translatable_fields:
+        if field in item:
+            result[field] = item[field]
+
+    return result
+
+def check_duplicate_codes(args, file_data, file_path):
+    codes = set()
+    for c in file_data:
+        code = c.get("code")
+        if code in codes:
+            verbose_print(args, "WARN: duplicate 'code' %s in %s\n"%(code, file_path), 0)
+            continue
+        codes.add(code)
+
+def check_extra_i18n_codes(args, i18n_dict, en_dict, file_path):
+    extra_i18n = i18n_dict.keys() - en_dict.keys()
+    if len(extra_i18n) != 0:
+        verbose_print(args, "WARN: extra entries in %s: %s\n"%(file_path, extra_i18n), 0)
+
+def load_translatable_dict(args, file_path, warn_if_extra=False):
+    if check_file_access(file_path):
+        file_data = load_json_file(args, file_path)
+    else:
+        verbose_print(args, "WARN: could not load %s\n"%file_path)
+        return None, 0
+
+    check_duplicate_codes(args, file_data, file_path)
+
+    translatables = {}
+    total = 0
+    for c in file_data:
+        code = c.get("code")
+        if code in translatables:
+            verbose_print(args, "WARN: file already has an entry for %s\n"%code, 0)
+            continue
+
+        translatable = get_translatable_strings(args, c, file_path, warn_if_extra)
+        #verbose_print(args, "%s: len(translatable)=%d\n"%(en_file_path, len(translatable)), 0)
+        if len(translatable) > 0:
+            translatables[c.get("code")] = translatable
+
+        total += len(translatable)
+        #verbose_print(args, "got code %s\n"% c.get("code"), 0)
+
+    return translatables, total
+
+
+def compare_translations(args, base_translations_path, locale_name, en_file_path):
+    if check_file_access(en_file_path):
+        en_data = load_json_file(args, en_file_path)
+    else:
+        verbose_print(args, "could not load %s\n"%en_file_path)
+        return None
+
+    en_dict = {}
+    total = 0
+    en_dict, total = load_translatable_dict(args, en_file_path)
+    if en_dict is None:
+        return None
+
+    if total == 0:
+        verbose_print(args, "%s: no translatable strings in %s\n"%(locale_name, en_file_path), 1)
+    i18n_file_path = os.path.join(base_translations_path, locale_name, en_file_path)
+
+    stats = i18nStats(locale_name, en_file_path)
+    stats.total = total
+    stats.translated = 0
+    stats.untranslated = {}
+
+    i18n_dict, total = load_translatable_dict(args, i18n_file_path, True)
+
+    check_extra_i18n_codes(args, i18n_dict, en_dict, i18n_file_path)
+
+    for code, i18n_strings in i18n_dict.items():
+        if not code in en_dict:
+            verbose_print(args, "%s: unexpected translated entry: %s\n"%(locale_name, code), 0)
+            continue
+
+        untranslated = {}
+        en_strings = en_dict[code]
+        for field, value in en_strings.items():
+            if field in i18n_strings:
+                if value == i18n_strings[field] and value != "":
+                    untranslated[field] = value
+                else:
+                    stats.translated+=1
+            else:
+                untranslated[field] = value
+        if len(untranslated) > 0:
+            untranslated["code"] = code
+            stats.untranslated[code] = untranslated
+            #verbose_print(args, "%s:%s: %s are not translated\n"%(locale_name, code, untranslated), 1)
+        #del en_dict[code]
+
+        en_dict.pop(code)
+
+    stats.missing = en_dict
+    if len(stats.missing) != 0:
+        verbose_print(args, "%s: %s are missing\n"%(locale_name, stats.missing.keys()), 1)
+
+    if len(stats.untranslated) != 0:
+        verbose_print(args, "untranslated json:\n%s\n"%format_json(list(stats.untranslated.values())), 1)
+
+    return stats
+
+def compare_translations_simple(args, base_translations_path, locale_name, base_file_name):
+    en_file_path = "%s.json" % (base_file_name)
+    return compare_translations(args, base_translations_path, locale_name, en_file_path)
+
+def compare_translations_packs(args, base_translations_path, locale_name):
+    packs_translations_path = os.path.join(base_translations_path, locale_name, 'pack')
+    cycle_dirs = os.listdir(packs_translations_path)
+    for cycle_dir in cycle_dirs:
+        file_names = os.listdir(os.path.join(packs_translations_path, cycle_dir))
+        for file_name in file_names:
+            if not file_name.endswith(".json"):
+                verbose_print(args, "Ignoring non-json file %s\n" % file_name, 1)
+                continue
+
+            file_path = os.path.join('pack', cycle_dir, file_name)
+            stats = compare_translations(args, base_translations_path, locale_name, file_path)
+            if not stats is None:
+                stats.print_short(args)
+            #verbose_print(args, "Loading file %s...\n" % file_name, 1)
+            #file_path = os.path.join(packs_translations_path, cycle_dir, file_name)
+            #load_json_file(args, file_path)
+
 def check_translations_packs(args, base_translations_path, locale_name):
     packs_translations_path = os.path.join(base_translations_path, locale_name, 'pack')
     cycle_dirs = os.listdir(packs_translations_path)
@@ -388,13 +559,27 @@ def check_translations_packs(args, base_translations_path, locale_name):
 def check_translations(args, base_translations_path, locale_name):
     verbose_print(args, "Loading Translations for %s...\n" % locale_name, 1)
     translations_path = os.path.join(base_translations_path, locale_name)
-    check_translations_simple(args, base_translations_path, locale_name, 'cycles')
-    check_translations_simple(args, base_translations_path, locale_name, 'encounters')
-    check_translations_simple(args, base_translations_path, locale_name, 'factions')
-    check_translations_simple(args, base_translations_path, locale_name, 'packs')
-    check_translations_simple(args, base_translations_path, locale_name, 'subtypes')
-    check_translations_simple(args, base_translations_path, locale_name, 'types')
-    check_translations_packs(args, base_translations_path, locale_name)
+    #check_translations_simple(args, base_translations_path, locale_name, 'cycles')
+    #check_translations_simple(args, base_translations_path, locale_name, 'encounters')
+    #check_translations_simple(args, base_translations_path, locale_name, 'factions')
+    #check_translations_simple(args, base_translations_path, locale_name, 'packs')
+    #check_translations_simple(args, base_translations_path, locale_name, 'subtypes')
+    #check_translations_simple(args, base_translations_path, locale_name, 'types')
+    #check_translations_packs(args, base_translations_path, locale_name)
+
+    compare_translations_packs(args, base_translations_path, locale_name)
+    stats = compare_translations_simple(args, base_translations_path, locale_name, 'cycles')
+    stats.print_short(args)
+    stats = compare_translations_simple(args, base_translations_path, locale_name, 'encounters')
+    stats.print_short(args)
+    stats = compare_translations_simple(args, base_translations_path, locale_name, 'factions')
+    stats.print_short(args)
+    stats = compare_translations_simple(args, base_translations_path, locale_name, 'packs')
+    stats.print_short(args)
+    stats = compare_translations_simple(args, base_translations_path, locale_name, 'subtypes')
+    stats.print_short(args)
+    stats = compare_translations_simple(args, base_translations_path, locale_name, 'types')
+    stats.print_short(args)
 
 def check_all_translations(args):
     verbose_print(args, "Loading Translations...\n", 1)
@@ -435,7 +620,7 @@ def main():
     types = load_types(args)
 
     if packs and factions and types:
-        validate_cards(args, packs, factions, types)
+        #validate_cards(args, packs, factions, types)
         check_all_translations(args)
     else:
         verbose_print(args, "Skipping card validation...\n", 0)
