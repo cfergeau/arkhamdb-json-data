@@ -465,6 +465,20 @@ def load_translatable_dict(args, file_path, warn_if_extra=False):
 
     return translatables, total
 
+def should_ignore(ignore_dict, code, field, value):
+    if ignore_dict is None:
+        return False
+
+    if not code in ignore_dict:
+        return False
+
+    if not field in ignore_dict[code]:
+        return False
+
+    if ignore_dict[code][field] == value:
+        return True
+
+    return False
 
 def compare_translations(args, base_translations_path, locale_name, en_file_path):
     if check_file_access(en_file_path):
@@ -492,6 +506,12 @@ def compare_translations(args, base_translations_path, locale_name, en_file_path
 
     check_extra_i18n_codes(args, i18n_dict, en_dict, i18n_file_path)
 
+    ignore_file_path = i18n_file_path.removesuffix(".json")+".ignore"
+    if check_file_access(ignore_file_path):
+        ignore_dict, total = load_translatable_dict(args, ignore_file_path)
+    else:
+        ignore_dict = None
+
     for code, i18n_strings in i18n_dict.items():
         if not code in en_dict:
             verbose_print(args, "%s: unexpected translated entry: %s\n"%(locale_name, code), 0)
@@ -501,7 +521,10 @@ def compare_translations(args, base_translations_path, locale_name, en_file_path
         en_strings = en_dict[code]
         for field, value in en_strings.items():
             if field in i18n_strings:
-                if value == i18n_strings[field] and value != "":
+                if should_ignore(ignore_dict, code, field, i18n_strings[field]):
+                    verbose_print(args, "ignoring %s %s %s\n"%(code, field, i18n_strings[field]), 2)
+                    stats.translated+=1
+                elif value == i18n_strings[field] and value != "":
                     untranslated[field] = value
                 else:
                     stats.translated+=1
