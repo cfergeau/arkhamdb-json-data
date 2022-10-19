@@ -1,0 +1,39 @@
+[
+	{
+		"code": "02001",
+		"name": "Zoey Samaras"
+	},
+	{
+		"code": "02002",
+		"name": "Rex Murphy",
+		"traits": "Reporter."
+	},
+	{
+		"code": "02003",
+		"name": "Jenny Barnes"
+	},
+	{
+		"code": "02004",
+		"name": "Jim Culver"
+	},
+	{
+		"code": "02014",
+		"name": "Duke"
+	},
+	{
+		"code": "02028",
+		"slot": "Arcane"
+	},
+	{
+		"code": "02030",
+		"slot": "Arcane"
+	},
+	{
+		"code": "02033",
+		"name": "Peter Sylvestre"
+	},
+	{
+		"code": "02035",
+		"name": "Peter Sylvestre"
+	}
+]

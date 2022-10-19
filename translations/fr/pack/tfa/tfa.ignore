@@ -1,0 +1,46 @@
+[
+	{
+		"code": "04001",
+		"name": "Leo Anderson"
+	},
+	{
+		"code": "04002",
+		"name": "Ursula Downs"
+	},
+	{
+		"code": "04003",
+		"name": "Finn Edwards"
+	},
+	{
+		"code": "04005",
+		"name": "Calvin Wright"
+	},
+	{
+		"code": "04006",
+		"name": "Mitch Brown"
+	},
+	{
+		"code": "04008",
+		"name": "Jake Williams"
+	},
+	{
+		"code": "04013",
+		"subname": "finis omnium nunc est"
+	},
+	{
+		"code": "04015",
+		"traits": "Talent."
+	},
+	{
+		"code": "04029",
+		"slot": "Arcane"
+	},
+	{
+		"code": "04031",
+		"slot": "Arcane"
+	},
+	{
+		"code": "04035",
+		"name": "Yaotl"
+	}
+]

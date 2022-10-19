@@ -1,0 +1,63 @@
+[
+	{
+		"code": "03001",
+		"name": "Mark Harrigan"
+	},
+	{
+		"code": "03002",
+		"name": "Minh Thi Phan",
+		"traits": "Assistant."
+	},
+	{
+		"code": "03003",
+		"name": "Sefina Rousseau"
+	},
+	{
+		"code": "03004",
+		"name": "Akachi Onyele"
+	},
+	{
+		"code": "03005",
+		"name": "William Yorick"
+	},
+	{
+		"code": "03006",
+		"name": "Lola Hayes"
+	},
+	{
+		"code": "03009",
+		"name": "Sophie"
+	},
+	{
+		"code": "03009b",
+		"name": "Sophie"
+	},
+	{
+		"code": "03010",
+		"traits": "Talent."
+	},
+	{
+		"code": "03018",
+		"name": "Improvisation"
+	},
+	{
+		"code": "03021",
+		"traits": "Talent."
+	},
+	{
+		"code": "03024",
+		"traits": "Talent."
+	},
+	{
+		"code": "03027",
+		"traits": "Talent."
+	},
+	{
+		"code": "03028",
+		"traits": "Talent."
+	},
+	{
+		"code": "03032",
+		"slot": "Arcane"
+	}
+]

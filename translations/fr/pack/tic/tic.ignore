@@ -1,0 +1,34 @@
+[
+	{
+		"code": "07002",
+		"name": "Amanda Sharpe"
+	},
+	{
+		"code": "07003",
+		"name": "Trish Scarborough"
+	},
+	{
+		"code": "07004",
+		"name": "Dexter Drake"
+	},
+	{
+		"code": "07005",
+		"name": "Silas Marsh"
+	},
+	{
+		"code": "07012",
+		"traits": "Talent."
+	},
+	{
+		"code": "07019",
+		"slot": "Arcane"
+	},
+	{
+		"code": "07026",
+		"slot": "Arcane"
+	},
+	{
+		"code": "07027",
+		"slot": "Arcane"
+	}
+]

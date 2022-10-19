@@ -1,0 +1,19 @@
+[
+	{
+		"code": "52004",
+		"slot": "Arcane"
+	},
+	{
+		"code": "52005",
+		"traits": "Talent."
+	},
+	{
+		"code": "52006",
+		"name": "Suggestion",
+		"slot": "Arcane"
+	},
+	{
+		"code": "52007",
+		"slot": "Arcane"
+	}
+]

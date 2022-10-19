@@ -1,0 +1,74 @@
+[
+	{
+		"code": "05001",
+		"name": "Carolyn Fern"
+	},
+	{
+		"code": "05002",
+		"name": "Joe Diamond"
+	},
+	{
+		"code": "05003",
+		"name": "Preston Fairmont"
+	},
+	{
+		"code": "05004",
+		"name": "Diana Stanley"
+	},
+	{
+		"code": "05005",
+		"name": "Rita Young",
+		"traits": "Miskatonic."
+	},
+	{
+		"code": "05006",
+		"name": "Marie Lambeau"
+	},
+	{
+		"code": "05007",
+		"traits": "Talent."
+	},
+	{
+		"code": "05015",
+		"name": "Terrible Secret"
+	},
+	{
+		"code": "05019",
+		"name": "Baron Samedi",
+		"traits": "Avatar."
+	},
+	{
+		"code": "05023",
+		"slot": "Tarot",
+		"traits": "Tarot."
+	},
+	{
+		"code": "05027",
+		"slot": "Tarot",
+		"traits": "Tarot."
+	},
+	{
+		"code": "05031",
+		"slot": "Tarot",
+		"traits": "Tarot."
+	},
+	{
+		"code": "05035",
+		"slot": "Tarot",
+		"traits": "Tarot."
+	},
+	{
+		"code": "05039",
+		"slot": "Tarot",
+		"traits": "Tarot."
+	},
+	{
+		"code": "05040",
+		"slot": "Tarot",
+		"traits": "Tarot."
+	},
+	{
+		"code": "05042",
+		"slot": "Tarot"
+	}
+]
