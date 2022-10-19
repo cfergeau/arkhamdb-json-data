@@ -1,0 +1,79 @@
+[
+    {
+        "code": "01001",
+        "name": "Roland Banks"
+    },
+    {
+        "code": "01002",
+        "name": "Daisy Walker",
+        "traits": "Miskatonic."
+    },
+    {
+        "code": "01004",
+        "name": "Agnes Baker"
+    },
+    {
+        "code": "01005",
+        "name": "Wendy Adams"
+    },
+    {
+        "code": "01017",
+        "traits": "Talent."
+    },
+    {
+        "code": "01019",
+        "traits": "Talent. Science."
+    },
+    {
+        "code": "01033",
+        "name": "Dr. Milan Christopher"
+    },
+    {
+        "code": "01034",
+        "traits": "Talent."
+    },
+    {
+        "code": "01038",
+        "name": "Barricade"
+    },
+    {
+        "code": "01048",
+        "name": "Leo De Luca"
+    },
+    {
+        "code": "01049",
+        "traits": "Talent."
+    },
+    {
+        "code": "01054",
+        "name": "Leo De Luca"
+    },
+    {
+        "code": "01058",
+        "traits": "Talent."
+    },
+    {
+        "code": "01060",
+        "slot": "Arcane"
+    },
+    {
+        "code": "01061",
+        "slot": "Arcane"
+    },
+    {
+        "code": "01062",
+        "traits": "Talent."
+    },
+    {
+        "code": "01073",
+        "traits": "Talent."
+    },
+    {
+        "code": "01077",
+        "traits": "Talent."
+    },
+    {
+        "code": "01082",
+        "name": "Aquinnah"
+    }
+]

@@ -1,0 +1,58 @@
+[
+	{
+		"code": "60401",
+		"name": "Jacqueline Fine",
+		"traits": "Clairvoyant."
+	},
+	{
+		"code": "60402",
+		"traits": "Talent."
+	},
+	{
+		"code": "60407",
+		"slot": "Arcane"
+	},
+	{
+		"code": "60408",
+		"name": "Clairvoyance",
+		"slot": "Arcane"
+	},
+	{
+		"code": "60409",
+		"slot": "Arcane"
+	},
+	{
+		"code": "60425",
+		"slot": "Arcane"
+	},
+	{
+		"code": "60426",
+		"name": "Clairvoyance",
+		"slot": "Arcane"
+	},
+	{
+		"code": "60427",
+		"slot": "Arcane"
+	},
+	{
+		"code": "60428",
+		"traits": "Talent."
+	},
+	{
+		"code": "60429",
+		"name": "Recharge"
+	},
+	{
+		"code": "60430",
+		"slot": "Arcane"
+	},
+	{
+		"code": "60431",
+		"name": "Clairvoyance",
+		"slot": "Arcane"
+	},
+	{
+		"code": "60432",
+		"slot": "Arcane"
+	}
+]

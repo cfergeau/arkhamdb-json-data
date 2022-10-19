@@ -1,0 +1,39 @@
+[
+	{
+		"code": "60201",
+		"name": "Harvey Walters",
+		"traits": "Miskatonic."
+	},
+	{
+		"code": "60202",
+		"traits": "Talent."
+	},
+	{
+		"code": "60205",
+		"slot": "Arcane"
+	},
+	{
+		"code": "60209",
+		"slot": "Arcane"
+	},
+	{
+		"code": "60211",
+		"traits": "Talent."
+	},
+	{
+		"code": "60213",
+		"name": "Whitton Greene"
+	},
+	{
+		"code": "60223",
+		"name": "Whitton Greene"
+	},
+	{
+		"code": "60228",
+		"name": "Perception"
+	},
+	{
+		"code": "60231",
+		"slot": "Arcane"
+	}
+]

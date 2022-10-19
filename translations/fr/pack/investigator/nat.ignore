@@ -1,0 +1,46 @@
+[
+	{
+		"code": "60101",
+		"name": "Nathaniel Cho"
+	},
+	{
+		"code": "60102",
+		"name": "Randall Cho"
+	},
+	{
+		"code": "60103",
+		"name": "Tommy Malloy"
+	},
+	{
+		"code": "60106",
+		"slot": "Arcane"
+	},
+	{
+		"code": "60107",
+		"name": "Grete Wagner"
+	},
+	{
+		"code": "60109",
+		"traits": "Talent."
+	},
+	{
+		"code": "60110",
+		"traits": "Talent."
+	},
+	{
+		"code": "60115",
+		"flavor": "Ding, ding, ding!"
+	},
+	{
+		"code": "60125",
+		"name": "Mano a Mano"
+	},
+	{
+		"code": "60128",
+		"name": "Grete Wagner"
+	},
+	{
+		"code": "60131",
+		"traits": "Talent."
+	}
+]
