@@ -4,6 +4,7 @@ import argparse
 import json
 import jsonschema
 import os
+import pathlib
 import sys
 import re
 
@@ -127,6 +128,7 @@ def parse_commandline():
     argparser.add_argument("-p", "--pack_path", default=None, help=("pack directory of JSON repo (default: BASE_PATH/%s/)" % PACK_DIR))
     argparser.add_argument("-c", "--schema_path", default=None, help=("schema directory of JSON repo (default: BASE_PATH/%s/" % SCHEMA_DIR))
     argparser.add_argument("-l", "--languages", default=None, help=("comma-separated list of languages to process (default: all languages)"))
+    argparser.add_argument("i18n_files", nargs="*", default=None, help=("list of json files to process (default: all files for the selected languages)"))
 
     args = argparser.parse_args()
 
@@ -343,6 +345,16 @@ def all_files(args):
     yield 'subtypes.json'
     yield 'types.json'
 
+def all_locales(args, files):
+    langs = get_languages(args)
+    verbose_print(args, "Processing %s...\n"%langs, 1)
+
+    base_translations_path = os.path.join(args.base_path, "translations")
+    for locale_name in langs:
+        locale = i18nLocale(locale_name, base_translations_path)
+        for f in files:
+            yield f
+
 def check_translations(args, locale, fileIterator):
     for en_file_path in fileIterator:
             stats = compare_translations(args, locale, en_file_path)
@@ -358,6 +370,27 @@ def check_all_locales(args, fileIterator):
     for locale_name in langs:
         locale = i18nLocale(locale_name, base_translations_path)
         check_translations(args, locale, iter(files))
+
+def check_file_list(args, files):
+    base_translations_path = os.path.join(args.base_path, "translations")
+    abs_translations_path = os.path.abspath(base_translations_path)
+    for f in files:
+        abs_f = os.path.abspath(f)
+        if abs_f.startswith(abs_translations_path):
+            rel_f = os.path.relpath(abs_f, abs_translations_path)
+            path = pathlib.Path(rel_f)
+            if len(path.parts) < 2:
+                verbose_print(args, "WARN: cannot process %s"%f, 0)
+                continue
+            locale = i18nLocale(path.parts[0], base_translations_path)
+            rel_f = "/".join(path.parts[1:])
+            check_translations(args, locale, iter([rel_f]))
+        else:
+            rel_f = os.path.relpath(abs_f)
+            check_all_locales(args, iter([rel_f]))
+
+
+
 
 def verbose_print(args, text, minimum_verbosity=0):
     if args.verbose >= minimum_verbosity:
@@ -377,7 +410,11 @@ def main():
     packs = load_packs(args, cycles)
 
     if cycles and packs:
-        check_all_locales(args, all_files(args))
+        if len(args.i18n_files) == 0:
+            check_all_locales(args, all_files(args))
+        else:
+            verbose_print(args, "i18_files: %s\n"%args.i18n_files, 0)
+            check_file_list(args, args.i18n_files)
     else:
         verbose_print(args, "Skipping card validation...\n", 0)
 
