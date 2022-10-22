@@ -310,10 +310,6 @@ def compare_translations(args, base_translations_path, locale_name, en_file_path
 
     return stats
 
-def compare_translations_simple(args, base_translations_path, locale_name, base_file_name):
-    en_file_path = "%s.json" % (base_file_name)
-    return compare_translations(args, base_translations_path, locale_name, en_file_path)
-
 def compare_translations_packs(args, base_translations_path, locale_name):
     packs_translations_path = os.path.join(base_translations_path, locale_name, 'pack')
     cycle_dirs = os.listdir(packs_translations_path)
@@ -337,17 +333,17 @@ def check_translations(args, base_translations_path, locale_name):
     translations_path = os.path.join(base_translations_path, locale_name)
 
     compare_translations_packs(args, base_translations_path, locale_name)
-    stats = compare_translations_simple(args, base_translations_path, locale_name, 'cycles')
+    stats = compare_translations(args, base_translations_path, locale_name, 'cycles.json')
     stats.print_short(args)
-    stats = compare_translations_simple(args, base_translations_path, locale_name, 'encounters')
+    stats = compare_translations(args, base_translations_path, locale_name, 'encounters.json')
     stats.print_short(args)
-    stats = compare_translations_simple(args, base_translations_path, locale_name, 'factions')
+    stats = compare_translations(args, base_translations_path, locale_name, 'factions.json')
     stats.print_short(args)
-    stats = compare_translations_simple(args, base_translations_path, locale_name, 'packs')
+    stats = compare_translations(args, base_translations_path, locale_name, 'packs.json')
     stats.print_short(args)
-    stats = compare_translations_simple(args, base_translations_path, locale_name, 'subtypes')
+    stats = compare_translations(args, base_translations_path, locale_name, 'subtypes.json')
     stats.print_short(args)
-    stats = compare_translations_simple(args, base_translations_path, locale_name, 'types')
+    stats = compare_translations(args, base_translations_path, locale_name, 'types.json')
     stats.print_short(args)
 
 def check_all_translations(args):
