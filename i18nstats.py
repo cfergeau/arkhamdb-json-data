@@ -132,10 +132,10 @@ def parse_commandline():
     args = argparser.parse_args()
 
     # Set all the necessary paths and check if they exist
-    if getattr(args, "schema_path", None) is None:
-        setattr(args, "schema_path", os.path.join(args.base_path,SCHEMA_DIR))
-    if getattr(args, "pack_path", None) is None:
-        setattr(args, "pack_path", os.path.join(args.base_path,PACK_DIR))
+    if args.schema_path is None:
+        args.schema_path = os.path.join(args.base_path,SCHEMA_DIR)
+    if args.pack_path is None:
+        args.pack_path = os.path.join(args.base_path,PACK_DIR)
 
     if args.languages is not None:
         args.languages = args.languages.split(",")
@@ -147,9 +147,9 @@ def parse_commandline():
     return args
 
 def get_languages(args):
-    languages = getattr(args, "languages", None)
-    base_translations_path = os.path.join(args.base_path, "translations")
+    languages = args.languages
     if languages is None:
+        base_translations_path = os.path.join(args.base_path, "translations")
         languages = os.listdir(base_translations_path)
 
     return languages
