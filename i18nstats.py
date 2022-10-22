@@ -127,6 +127,8 @@ def parse_commandline():
     argparser.add_argument("-b", "--base_path", default=os.getcwd(), help="root directory of JSON repo (default: current directory)")
     argparser.add_argument("-p", "--pack_path", default=None, help=("pack directory of JSON repo (default: BASE_PATH/%s/)" % PACK_DIR))
     argparser.add_argument("-c", "--schema_path", default=None, help=("schema directory of JSON repo (default: BASE_PATH/%s/" % SCHEMA_DIR))
+    argparser.add_argument("-l", "--languages", default=None, help=("comma-separated list of languages to process (default: all languages)"))
+
     args = argparser.parse_args()
 
     # Set all the necessary paths and check if they exist
@@ -134,11 +136,23 @@ def parse_commandline():
         setattr(args, "schema_path", os.path.join(args.base_path,SCHEMA_DIR))
     if getattr(args, "pack_path", None) is None:
         setattr(args, "pack_path", os.path.join(args.base_path,PACK_DIR))
+
+    if args.languages is not None:
+        args.languages = args.languages.split(",")
+
     check_dir_access(args.base_path)
     check_dir_access(args.schema_path)
     check_dir_access(args.pack_path)
 
     return args
+
+def get_languages(args):
+    languages = getattr(args, "languages", None)
+    base_translations_path = os.path.join(args.base_path, "translations")
+    if languages is None:
+        languages = os.listdir(base_translations_path)
+
+    return languages
 
 class i18nStats(object):
     def __init__(self, locale, file_name):
@@ -338,9 +352,12 @@ def check_translations(args, base_translations_path, locale_name):
 
 def check_all_translations(args):
     verbose_print(args, "Loading Translations...\n", 1)
+
+    langs = get_languages(args)
+    verbose_print(args, "Processing %s...\n"%langs, 1)
+
     base_translations_path = os.path.join(args.base_path, "translations")
-    translations_directories = os.listdir(base_translations_path)
-    for locale_name in translations_directories:
+    for locale_name in langs:
         check_translations(args, base_translations_path, locale_name)
 
 def verbose_print(args, text, minimum_verbosity=0):
