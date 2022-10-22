@@ -154,16 +154,24 @@ def get_languages(args):
 
     return languages
 
+class i18nLocale(object):
+    def __init__(self, locale, base_path = "translations"):
+        self.name = locale
+        self.base_path = base_path
+
+    def resolvePath(self, enPath):
+        return os.path.join(self.base_path, self.name, enPath)
+
 class i18nStats(object):
-    def __init__(self, locale, file_name):
+    def __init__(self, locale, en_file_name):
         self.locale = locale
-        self.file_name = file_name
+        self.en_file_name = en_file_name
         self.translated = 0
         self.untranslated = {}
         self.missing = {}
 
     def print(self, args):
-        verbose_print(args, "%s: %s\n"%(self.locale, self.file_name), 0)
+        verbose_print(args, "%s: %s\n"%(self.locale.name, self.en_file_name), 0)
         verbose_print(args, "%s: translated: %d untranslated: %d\n"%(self.locale, self.translated, len(self.untranslated)), 0)
         if len(self.untranslated) != 0:
             verbose_print(args, "%s: untranslated: %s\n"%(self.locale, self.untranslated), 1)
@@ -173,7 +181,7 @@ class i18nStats(object):
     def print_short(self, args):
         if self.translated == self.total:
             return
-        path = os.path.join("translations", self.locale, self.file_name)
+        path = self.locale.resolvePath(self.en_file_name)
         verbose_print(args, "%s (%d / %d)\n"%(path, self.translated, self.total), 0)
 
 
@@ -249,7 +257,7 @@ def should_ignore(ignore_dict, code, field, value):
 
     return False
 
-def compare_translations(args, base_translations_path, locale_name, en_file_path):
+def compare_translations(args, locale, en_file_path):
     en_dict = {}
     total = 0
     en_dict, total = load_translatable_dict(args, en_file_path)
@@ -257,14 +265,14 @@ def compare_translations(args, base_translations_path, locale_name, en_file_path
         return None
 
     if total == 0:
-        verbose_print(args, "%s: no translatable strings in %s\n"%(locale_name, en_file_path), 1)
-    i18n_file_path = os.path.join(base_translations_path, locale_name, en_file_path)
+        verbose_print(args, "%s: no translatable strings in %s\n"%(locale.name, en_file_path), 1)
 
-    stats = i18nStats(locale_name, en_file_path)
+    stats = i18nStats(locale, en_file_path)
     stats.total = total
     stats.translated = 0
     stats.untranslated = {}
 
+    i18n_file_path = locale.resolvePath(en_file_path)
     i18n_dict, total = load_translatable_dict(args, i18n_file_path, True)
 
     check_extra_i18n_codes(args, i18n_dict, en_dict, i18n_file_path)
@@ -277,7 +285,7 @@ def compare_translations(args, base_translations_path, locale_name, en_file_path
 
     for code, i18n_strings in i18n_dict.items():
         if not code in en_dict:
-            verbose_print(args, "%s: unexpected translated entry: %s\n"%(locale_name, code), 0)
+            verbose_print(args, "%s: unexpected translated entry: %s\n"%(locale.name, code), 0)
             continue
 
         untranslated = {}
@@ -303,15 +311,15 @@ def compare_translations(args, base_translations_path, locale_name, en_file_path
 
     stats.missing = en_dict
     if len(stats.missing) != 0:
-        verbose_print(args, "%s: %s are missing\n"%(locale_name, stats.missing.keys()), 1)
+        verbose_print(args, "%s: %s are missing\n"%(locale.name, stats.missing.keys()), 1)
 
     if len(stats.untranslated) != 0:
         verbose_print(args, "untranslated json:\n%s\n"%format_json(list(stats.untranslated.values())), 1)
 
     return stats
 
-def compare_translations_packs(args, base_translations_path, locale_name):
-    packs_translations_path = os.path.join(base_translations_path, locale_name, 'pack')
+def compare_translations_packs(args, locale):
+    packs_translations_path = locale.resolvePath('pack')
     cycle_dirs = os.listdir(packs_translations_path)
     for cycle_dir in cycle_dirs:
         file_names = os.listdir(os.path.join(packs_translations_path, cycle_dir))
@@ -321,29 +329,28 @@ def compare_translations_packs(args, base_translations_path, locale_name):
                 continue
 
             file_path = os.path.join('pack', cycle_dir, file_name)
-            stats = compare_translations(args, base_translations_path, locale_name, file_path)
+            stats = compare_translations(args, locale, file_path)
             if not stats is None:
                 stats.print_short(args)
             #verbose_print(args, "Loading file %s...\n" % file_name, 1)
             #file_path = os.path.join(packs_translations_path, cycle_dir, file_name)
             #load_json_file(args, file_path)
 
-def check_translations(args, base_translations_path, locale_name):
-    verbose_print(args, "Loading Translations for %s...\n" % locale_name, 1)
-    translations_path = os.path.join(base_translations_path, locale_name)
+def check_translations(args, locale):
+    verbose_print(args, "Loading Translations for %s...\n" % locale.name, 1)
 
-    compare_translations_packs(args, base_translations_path, locale_name)
-    stats = compare_translations(args, base_translations_path, locale_name, 'cycles.json')
+    compare_translations_packs(args, locale)
+    stats = compare_translations(args, locale, 'cycles.json')
     stats.print_short(args)
-    stats = compare_translations(args, base_translations_path, locale_name, 'encounters.json')
+    stats = compare_translations(args, locale, 'encounters.json')
     stats.print_short(args)
-    stats = compare_translations(args, base_translations_path, locale_name, 'factions.json')
+    stats = compare_translations(args, locale, 'factions.json')
     stats.print_short(args)
-    stats = compare_translations(args, base_translations_path, locale_name, 'packs.json')
+    stats = compare_translations(args, locale, 'packs.json')
     stats.print_short(args)
-    stats = compare_translations(args, base_translations_path, locale_name, 'subtypes.json')
+    stats = compare_translations(args, locale, 'subtypes.json')
     stats.print_short(args)
-    stats = compare_translations(args, base_translations_path, locale_name, 'types.json')
+    stats = compare_translations(args, locale, 'types.json')
     stats.print_short(args)
 
 def check_all_translations(args):
@@ -354,7 +361,8 @@ def check_all_translations(args):
 
     base_translations_path = os.path.join(args.base_path, "translations")
     for locale_name in langs:
-        check_translations(args, base_translations_path, locale_name)
+        locale = i18nLocale(locale_name, base_translations_path)
+        check_translations(args, locale)
 
 def verbose_print(args, text, minimum_verbosity=0):
     if args.verbose >= minimum_verbosity:
