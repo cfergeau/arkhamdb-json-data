@@ -321,7 +321,7 @@ def compare_translations(args, locale, en_file_path):
 
     return stats
 
-def compare_translations_packs(args, locale):
+def all_files(args):
     # This does not use args.pack_dir because it is an absolute path while this
     # code needs a relative path. Not sure a separate args.pack_dir makes a lot
     # of sense as `translations/*` is not under args.pack_dir and would not be
@@ -334,38 +334,30 @@ def compare_translations_packs(args, locale):
                 verbose_print(args, "Ignoring non-json file %s\n" % file_name, 1)
                 continue
 
-            file_path = os.path.join(PACK_DIR, cycle_dir, file_name)
-            stats = compare_translations(args, locale, file_path)
+            yield os.path.join(PACK_DIR, cycle_dir, file_name)
+
+    yield 'cycles.json'
+    yield 'encounters.json'
+    yield 'factions.json'
+    yield 'packs.json'
+    yield 'subtypes.json'
+    yield 'types.json'
+
+def check_translations(args, locale, fileIterator):
+    for en_file_path in fileIterator:
+            stats = compare_translations(args, locale, en_file_path)
             if not stats is None:
                 stats.print_short(args)
 
-def check_translations(args, locale):
-    verbose_print(args, "Loading Translations for %s...\n" % locale.name, 1)
-
-    compare_translations_packs(args, locale)
-    stats = compare_translations(args, locale, 'cycles.json')
-    stats.print_short(args)
-    stats = compare_translations(args, locale, 'encounters.json')
-    stats.print_short(args)
-    stats = compare_translations(args, locale, 'factions.json')
-    stats.print_short(args)
-    stats = compare_translations(args, locale, 'packs.json')
-    stats.print_short(args)
-    stats = compare_translations(args, locale, 'subtypes.json')
-    stats.print_short(args)
-    stats = compare_translations(args, locale, 'types.json')
-    stats.print_short(args)
-
-def check_all_translations(args):
-    verbose_print(args, "Loading Translations...\n", 1)
-
+def check_all_locales(args, fileIterator):
     langs = get_languages(args)
     verbose_print(args, "Processing %s...\n"%langs, 1)
 
+    files = list(fileIterator)
     base_translations_path = os.path.join(args.base_path, "translations")
     for locale_name in langs:
         locale = i18nLocale(locale_name, base_translations_path)
-        check_translations(args, locale)
+        check_translations(args, locale, iter(files))
 
 def verbose_print(args, text, minimum_verbosity=0):
     if args.verbose >= minimum_verbosity:
@@ -385,7 +377,7 @@ def main():
     packs = load_packs(args, cycles)
 
     if cycles and packs:
-        check_all_translations(args)
+        check_all_locales(args, all_files(args))
     else:
         verbose_print(args, "Skipping card validation...\n", 0)
 
