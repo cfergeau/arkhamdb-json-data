@@ -257,6 +257,11 @@ def should_ignore(ignore_dict, code, field, value):
 
     return False
 
+def flatten_i18n_dict(i18n_dict):
+    for key, value in i18n_dict.items():
+        value["code"] = key
+    return list(i18n_dict.values())
+
 def compare_translations(args, locale, en_file_path):
     en_dict = {}
     total = 0
@@ -302,7 +307,6 @@ def compare_translations(args, locale, en_file_path):
             else:
                 untranslated[field] = value
         if len(untranslated) > 0:
-            untranslated["code"] = code
             stats.untranslated[code] = untranslated
             #verbose_print(args, "%s:%s: %s are not translated\n"%(locale_name, code, untranslated), 1)
         #del en_dict[code]
@@ -311,10 +315,10 @@ def compare_translations(args, locale, en_file_path):
 
     stats.missing = en_dict
     if len(stats.missing) != 0:
-        verbose_print(args, "%s: %s are missing\n"%(locale.name, stats.missing.keys()), 1)
+        verbose_print(args, "missing json:\n%s\n"%format_json(flatten_i18n_dict(stats.missing)), 1)
 
     if len(stats.untranslated) != 0:
-        verbose_print(args, "untranslated json:\n%s\n"%format_json(list(stats.untranslated.values())), 1)
+        verbose_print(args, "untranslated json:\n%s\n"%format_json(flatten_i18n_dict(stats.untranslated)), 1)
 
     return stats
 
