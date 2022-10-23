@@ -318,22 +318,22 @@ def compare_translations(args, locale, en_file_path):
     return stats
 
 def compare_translations_packs(args, locale):
-    packs_translations_path = locale.resolvePath('pack')
-    cycle_dirs = os.listdir(packs_translations_path)
+    # This does not use args.pack_dir because it is an absolute path while this
+    # code needs a relative path. Not sure a separate args.pack_dir makes a lot
+    # of sense as `translations/*` is not under args.pack_dir and would not be
+    # relocated.
+    cycle_dirs = os.listdir(PACK_DIR)
     for cycle_dir in cycle_dirs:
-        file_names = os.listdir(os.path.join(packs_translations_path, cycle_dir))
+        file_names = os.listdir(os.path.join(PACK_DIR, cycle_dir))
         for file_name in file_names:
             if not file_name.endswith(".json"):
                 verbose_print(args, "Ignoring non-json file %s\n" % file_name, 1)
                 continue
 
-            file_path = os.path.join('pack', cycle_dir, file_name)
+            file_path = os.path.join(PACK_DIR, cycle_dir, file_name)
             stats = compare_translations(args, locale, file_path)
             if not stats is None:
                 stats.print_short(args)
-            #verbose_print(args, "Loading file %s...\n" % file_name, 1)
-            #file_path = os.path.join(packs_translations_path, cycle_dir, file_name)
-            #load_json_file(args, file_path)
 
 def check_translations(args, locale):
     verbose_print(args, "Loading Translations for %s...\n" % locale.name, 1)
