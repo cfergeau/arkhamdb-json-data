@@ -219,8 +219,8 @@ def load_translatable_dict(args, file_path, warn_if_extra=False):
     if check_file_access(file_path):
         file_data = load_json_file(args, file_path)
     else:
-        verbose_print(args, "WARN: could not load %s\n"%file_path)
-        return None, 0
+        verbose_print(args, "WARN: could not load %s\n"%file_path, 1)
+        return {}, 0
 
     check_duplicate_codes(args, file_data, file_path)
 
@@ -266,8 +266,6 @@ def compare_translations(args, locale, en_file_path):
     en_dict = {}
     total = 0
     en_dict, total = load_translatable_dict(args, en_file_path)
-    if en_dict is None:
-        return None
 
     if total == 0:
         verbose_print(args, "%s: no translatable strings in %s\n"%(locale.name, en_file_path), 1)
@@ -283,10 +281,7 @@ def compare_translations(args, locale, en_file_path):
     check_extra_i18n_codes(args, i18n_dict, en_dict, i18n_file_path)
 
     ignore_file_path = i18n_file_path.removesuffix(".json")+".ignore"
-    if check_file_access(ignore_file_path):
-        ignore_dict, total = load_translatable_dict(args, ignore_file_path)
-    else:
-        ignore_dict = None
+    ignore_dict, total = load_translatable_dict(args, ignore_file_path)
 
     for code, i18n_strings in i18n_dict.items():
         if not code in en_dict:
