@@ -190,16 +190,15 @@ def get_translatable_strings(args, item, file_path="", warn_if_extra=True):
     translatable_fields = {'flavor', 'name', 'subname', 'customization_text', 'customization_change', 'text', 'traits', 'back_name', 'back_flavor', 'back_text', 'back_traits', 'slot'}
     result = {}
 
-    if warn_if_extra:
-        extra = set(item).difference(translatable_fields, {'code'})
-        if len(extra) != 0:
-            verbose_print(args, "WARN:get_translatable_strings: extra entries in %s: %s\n"%(file_path, extra), 0)
+    extra = set(item).difference(translatable_fields, {'code'})
+    if warn_if_extra and len(extra) != 0:
+        verbose_print(args, "WARN:get_translatable_strings: extra entries in %s: %s\n"%(file_path, extra), 0)
 
     for field in translatable_fields:
         if field in item:
             result[field] = item[field]
 
-    return result
+    return result, len(extra) != 0
 
 def check_duplicate_codes(args, file_data, file_path):
     codes = set()
@@ -226,19 +225,25 @@ def load_translatable_dict(args, file_path, warn_if_extra=False):
 
     translatables = {}
     total = 0
+    found_extra = False
     for c in file_data:
         code = c.get("code")
         if code in translatables:
             verbose_print(args, "WARN: file already has an entry for %s\n"%code, 0)
             continue
 
-        translatable = get_translatable_strings(args, c, file_path, warn_if_extra)
+        translatable, extra = get_translatable_strings(args, c, file_path, warn_if_extra)
+        if extra:
+            found_extra = True
         #verbose_print(args, "%s: len(translatable)=%d\n"%(en_file_path, len(translatable)), 0)
         if len(translatable) > 0:
             translatables[c.get("code")] = translatable
 
         total += len(translatable)
         #verbose_print(args, "got code %s\n"% c.get("code"), 0)
+
+    if found_extra and warn_if_extra:
+        verbose_print(args, "json without extra entries:\n%s\n"%format_json(flatten_i18n_dict(translatables)), 1)
 
     return translatables, total
 
