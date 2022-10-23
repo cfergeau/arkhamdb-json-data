@@ -53,7 +53,6 @@ def load_json_file(args, path):
         verbose_print(args, "%s\n" % e.message, 0)
         return None
 
-    verbose_print(args, "%s: Checking JSON formatting...\n" % path, 1)
     formatted_raw_data = format_json(json_data)
 
     if "<sup>" in formatted_raw_data:
