@@ -6,15 +6,15 @@
         "subname": "La Psychologue",
         "text": "[reaction] Après que l'un de vos effets de carte a soigné de l'horreur d'un investigateur ou d'un soutien [[Allié]] : le contrôleur de la carte soignée gagne 1 ressource.\n[elder_sign] : +1. Vous avez le droit de soigner 1 horreur d'un investigateur ou d'un soutien [[Allié]] dans votre lieu.",
         "traits": "Médecin.",
-        "back_flavor": "Visiting psychologist Carolyn Fern's newest patient is Josephine Ruggles, an heiress whose nightmares leave glyph-shaped wounds across her back. Miss Ruggles's case is unusual, even for an institution like Arkham Sanatorium. Her case takes an even stranger turn after she claims to have met Malachi - Carolyn's former patient whose treatment was cut short when he was brutally murdered - in her dreams. When Carolyn uses hypnotherapy to address Josephine's trauma, they find themselves both journeying to a strange place Josephine calls \"the Dreamlands.\"",
+        "back_flavor": "La nouvelle patiente de la psychologue Carolyn Fern est Josephine Ruggles, une héritière dont les cauchemars laissent des blessures en forme de glyphe sur son dos. Le cas de Mademoiselle Ruggles est inhabituel, même pour une institution comme l'Asile d'Arkham. Son cas prend un tour encore plus étrange après qu'elle affirme avoir rencontré en rêve Malachi - l'ancien patient de Carolyn dont le traitement a été interrompu quand il a été brutalement assassiné - dans ses rêves. Quand Carolyn utilise l'hypnothérapie pour traiter le traumatisme de Josephine, elles se retrouvent toutes les deux à voyager vers un endroit étrange que Josephine appelle « Les Contrées du Rêve ».",
         "back_text": "<b>Taille du Deck</b> : 30\n<b>Construction du Deck</b> : cartes Gardien ([guardian]) de niveaux 0 à 3, cartes neutres de niveau 0 à 5, cartes qui « soignent de l'horreur » de niveaux 0 à 5, jusqu'à 15 autres cartes Chercheur et/ou Mystique de niveaux 0 à 1 ([seeker] et/ou [mystic]).\n<b>Exigences du Deck</b> (ne comptent pas dans la limite de taille du deck) : Thérapie par l'Hypnose, Pensée Rationnelle, 1 faiblesse de base au hasard.\n<b>Restrictions supplémentaires</b> : pas de cartes [[Arme]] de niveaux 1 à 5."
     },
     {
         "code": "98011",
-        "flavor": "\"Will we need to save you again?\" Foolishness flicked his tail back and forth. \"Perhaps. Perhaps I'll do the saving.\"",
-        "name": "Inepties",
+        "flavor": "« Aurons-nous besoin de te sauver à nouveau ? » Ineptie remua sa queue d'avant en arrière. « Peut-être… Peut-être est-ce moi qui te sauverai ».",
+        "name": "Ineptie",
         "subname": "Chat Fou d'Ulthar",
-        "text": "Deck de Carolyn Fern uniquement. Remplacement.\nInepties entre en jeu avec 3 horreurs sur lui. Les horreurs sur lui peuvent être soignées comme si elles étaient sur Carolyn Fern. Tant qu'Inepties n'a pas d'horreur sur lui, vous gagnez +1 à toutes vos compétences.",
+        "text": "Deck de Carolyn Fern uniquement. Remplacement.\nIneptie entre en jeu avec 3 horreurs sur lui. Les horreurs sur lui peuvent être soignées comme si elles étaient sur Carolyn Fern. Tant qu'Ineptie n'a pas d'horreur sur lui, vous gagnez +1 à toutes vos compétences.",
         "traits": "Allié. Créature. Contrées du Rêve.",
         "slot": "Allié"
     },

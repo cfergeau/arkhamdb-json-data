@@ -5,20 +5,20 @@
         "subname": "L'Astronome",
         "text": "Jouez avec la carte du dessus de votre deck révélée\nUne fois par round, vous avez le droit de jouer la carte du dessus de votre deck comme si elle était dans votre main, en réduisant de 1 son coût en ressources.\n<b>Forcé</b> – Après qu'une faiblesse a été révélée sur le dessus de votre deck : piochez-la.\n[elder_sign] : +X. Vous avez le droit d'échanger la carte du dessus de votre deck avec une carte de votre main. X est le coût en ressource de la carte du dessus de votre deck.",
         "traits": "Miskatonic.",
-        "back_flavor": "Nobody believes him, and why should they? How could six stars vanish from sight all at once, never to reappear? Astronomer and Miskatonic University professor Norman Withers had all but given up on regaining his colleagues' esteem when a protege of the renowned Albert Einstein comes to speak on campus. The visiting physicist, with unsettling theories about the curvature of space-time, may hold the key to helping Norman explain the phenomenon of the vanishing stars...",
-        "back_text": "<b>Taille du Deck</b> : 30.\n<b>Construction du Deck</b> : cartes Chercheur ([seeker]) de niveau 0, cartes Mystique ([mystic]) de niveaux 1 à 5, cartes neutres de niveaux 0 à 5, jusqu'à 5 autres cartes Mystique ([mystic]) de niveau 0.\n<b>Exigences du Deck</b> (ne comptent pas dans la limite de taille du deck) : Livre d'Eibon, L'Annonciateur, 1 faiblesse de base au hasard."
+        "back_flavor": "Personne ne le croit, et pourquoi le devraient-ils ? Comment six étoiles peuvent-elles disparaître à la vue de tous d'un seul coup, pour ne jamais réapparaître ? Norman Withers, professeur d'astronomie et de l'Université Miskatonic, n'a jamais renoncé à regagner l'estime de ses collègues lorsqu'un protégé du célèbre Albert Einstein s'exprimait sur le campus. Le physicien en visite, aux théories troublantes sur la courbure de l'espace-temps, pourrait être la clé pour aider Norman à expliquer le phénomène des étoiles qui disparaissent…",
+        "back_text": "<b>Taille du Deck</b> : 30.\n<b>Construction du Deck</b> : cartes Chercheur ([seeker]) de niveau 0, cartes Mystique ([mystic]) de niveaux 1 à 5, cartes neutres de niveaux 0 à 5, jusqu'à 5 autres cartes Mystique ([mystic]) de niveau 0.\n<b>Exigences du Deck</b> (ne comptent pas dans la limite de taille du deck) : Livre d'Eibon, Le Précurseur, 1 faiblesse de base au hasard."
     },
     {
         "code": "98008",
-        "flavor": "...another spell, likewise rendered phonetically, for \"splitting the angle\" and walking through time in the flesh.",
+        "flavor": "… un autre sort, également traduisible phonétiquement par « Découper les Angles » et parcourant le temps en personne.",
         "name": "Découper les Angles",
-        "subname": "La Colère du Vide",
+        "subname": "Ire du Vide",
         "text": "Deck de Norman Withers uniquement. Remplacement.\n[action] : révélez la premiere carte du deck Rencontre.\n[free] Inclinez Découper les Angles et défaussez la première carte de votre deck : défaussez la première carte du deck Rencontre.",
         "traits": "Sort."
     },
     {
         "code": "98009",
-        "flavor": "\"On those rare occasions when a man escapes the Hounds, he doesn't always stay escaped. Sooner or later, they're apt to come after him.\" - Richard Lee Byers, <i>Ire of the Void</i>",
+        "flavor": "Dans les rares cas où un homme échappe aux Molosses, il ne reste pas à l'abri. Tôt ou tard, il risque d'être poursuivi. - Richard Lee Byers, <i>Ire du Vide</i>",
         "name": "Molosse Vengeur",
         "text": "Deck de Norman Withers uniquement. Remplacement.\n<b>Proie</b> – Norman Withers uniquement.\nTant que le Molosse Vengeur est engagé avec vous, vous ne pouvez ni piocher ni révéler de cartes avec des effets de carte.",
         "traits": "Monstre. Extradimensionnel. Tindalos."
