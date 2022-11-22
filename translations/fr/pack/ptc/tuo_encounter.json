@@ -111,91 +111,91 @@
     },
     {
         "code": "03172",
-        "flavor": "Dirty dishes fill the sinks and cover the countertops. An unidentifiable sludge boils on the stove.",
-        "name": "Kitchen",
-        "text": "[action] If there are no clues on the Kitchen: Test [willpower] (2). If you succeed, remember that you \"set a fire in the kitchen.\"",
+        "flavor": "Les plans de travail et les éviers débordent de vaisselle sale. Une bouillie indéfinissable mijote sur le fourneau.",
+        "name": "Cuisines",
+        "text": "[action] S'il n'y a pas d'indices sur les Cuisines: Effectuez un test de [willpower] (2). En cas de réussite, souvenez vous que vous avez \"mis le feu aux cuisines.\"",
         "traits": "Asile d'Arkham.",
-        "back_flavor": "The narrow door in the back of the mess hall is locked. The scent that strikes you from behind the door is foul and repugnant.",
-        "back_text": "The door leading into the Kitchen is locked. You cannot enter the Kitchen."
+        "back_flavor": "L'étroitre porte au fond de la cantine est verrouillée. L'odeur qui se dégage de derrière le battant est infecte et répugante.",
+        "back_text": "La porte menant aux Cuisines est verrouillée. Vous ne pouvez pas entrer dans les Cuisines."
     },
     {
         "code": "03173",
-        "flavor": "Rows of tables are covered in dirty dishes and stale food. You get the feeling they took \"mess\" too literally here.",
-        "name": "Mess Hall",
-        "text": "<b>Forced</b> - After you successfully investigate the Mess Hall: Choose and discard 1 card from your hand.",
+        "flavor": "Des rangées de tables sont recouvertes de vaisselle sale et de nourriture rassie. C'est un véritable capharnaüm.",
+        "name": "Cantine",
+        "text": "<b>Forcé</b> - Après avoir enquêté avec succès dans la Cantine: choisissez et défaussez 1 carte de votre main.",
         "traits": "Asile d'Arkham.",
-        "back_flavor": "A wide, open doorway leads into the asylum’s mess hall, where patients would have their meals. It’s quieter than you expected - there are no chairs scuffling, dishes clanking, or patients speaking with one another"
+        "back_flavor": "Une large porte conduit dans la cantine de l'asile, où les patients prennent leur repas. C'est plus calme que vous ne l'imaginiez - pas de chaise qui vole, de vaisselle cassée ni même de patients en train de discuter"
     },
     {
         "code": "03174",
-        "flavor": "Our methods are proven.",
-        "name": "Infirmary",
-        "text": "[action]: Heal 1 damage and take 1 direct horror, or heal 1 horror and take 1 direct damage. (Limit once per round.)",
+        "flavor": "Nos méthodes ont fait leurs preuves.",
+        "name": "Infirmerie",
+        "text": "[action]: Soignez 1 dégât et subissez 1 horreur directe ou soignez 1 horreur et subissez un dégât direct. (Limite d'une fois par round.)",
         "traits": "Asile d'Arkham.",
-        "back_flavor": "The scratched plaque on this wooden door reads: \"Infirmary.\" This must be where the doctors treat their patients."
+        "back_flavor": "Une plaque usée fixée sur la porte en bois indique: \"Infirmerie.\" Ce doit être là que les médecins traitent leurs patients."
     },
     {
         "code": "03175",
-        "name": "Yard",
-        "text": "While you are investigating the Yard, it gets +1 shroud for each horror on you.\n[action] If there are no clues on Yard, take 1 damage: Remember that you \"incited a fight amongst the patients.\"",
+        "name": "Promenade",
+        "text": "Tant que vous enquêtez dans la Promenade, elle gagne +1 de valeur occulte pour chaque horreur sur vous.\n[action] S'il n'y a aucun indice sur la Promenade, subissez 1 dégât: souvenez-vous que vous avez \"provoqué une bagarre entre patients.\"",
         "traits": "Asile d'Arkham.",
-        "back_flavor": "The fresh air and the illusion of freedom makes the asylum’s courtyard a common gathering place for patients. Through the barred windows, dead tree branches sway in the wind. Gray, overcast skies trap the asylum in a dull limbo."
+        "back_flavor": "L'air frais et l'illusion de liberté font de la cour de promenade de l'asile un lieu de rasemblement habituel des patients. À travers les fenêtres verrouillées, vous voyez les branches des arbres morts osciller dans le vent. Un ciel gris et couvert piège l'asile dans des limbes moroses."
     },
     {
         "code": "03176",
-        "flavor": "Two guards in white uniforms stand by the gate to the garden, keeping watch.",
-        "name": "Garden",
-        "text": "[action] If there are no clues on Garden: Test [agility] (2). If you succeed, remember that you \"distracted the guards.\"",
+        "flavor": "Deux gardes en uniforme se tiennent de chaque côté de la porte du jardin. Ils veillent au grain.",
+        "name": "Jardin",
+        "text": "[action] S'il n'y a aucun indice sur le Jardin: Effectuez un test de [agility] (2). En cas de réussite, souveznez-vous que vous avez \"distrait les gardes.\"",
         "traits": "Asile d'Arkham.",
-        "back_flavor": "A lone statue stands sentinel over the garden. Cold wind causes dead leaves to roll gently across the garden path.",
-        "back_text": "The gate leading into the Garden is locked. You cannot enter the Garden."
+        "back_flavor": "Une statue isolée veille en sentinelle sur le jardin. Une brise fraîche fait doucement rouler les feuilles mortes sur le chemin du jardin.",
+        "back_text": "La porte menant au jardin est verrouillée. Vous ne pouvez pas entrer dans le jardin."
     },
     {
         "code": "03177",
-        "flavor": "A cramped stone staircase leads deep underground, to the basement level of the asylum. Cries and howls of anguish torment you from behind the hall's many iron doors. You can't imagine what it would be like to live your days in this place.",
-        "name": "Basement Hall",
-        "text": "<b>Forced</b> - After the Basement Hall is revealed: Put the 4 set-aside Patient Confinement locations into play.",
+        "flavor": "Un étroit escalier de pierre mène jusqu'au sous-sol de l'asile. Des hurlements d'angoisse vous assaillent à travers les nombreuses portes métalliques du couloir. Vous ne pouvez pas vous imaginer passer le reste de vos jours dans cet endroit.",
+        "name": "Couloir du Sous-sol",
+        "text": "<b>Forcé</b> - Après avoir révélé le Couloir du Sous-sol: mettez en jeu les 4 lieux Cellule d'Isolement.",
         "traits": "Asile d'Arkham.",
-        "back_flavor": "Dank air drifted out of some of the darker hallways. Carolyn asked, \"Do some of these passageways lead underground?\" Nurse Heather nodded. \"It’s a very old building, Doctor.\"\n– Mallory O’Meara, The Investigators of Arkham Horror",
-        "back_text": "The door leading into the Basement Hall is locked. You cannot enter the Basement Hall."
+        "back_flavor": "Un courant d'air froid et humide traversait les couloirs les plus sombres.\"Certains de es passages mènent-ils au sous-sol?\", interrogea Carolyn.  L'infirmière Heather acquiesa. \"C'est un très vieux bâtiment, Docteur.\"\n– Mallory O’Meara, The Investigators of Arkham Horror",
+        "back_text": "La porte menant au Couloir du Sous-sol est verrouillée. Vous ne pouvez pas entrer dans le Couloir du Sous-sol."
     },
     {
         "code": "03178",
-        "flavor": "Daniel's windowless cell is hopelessly dank and grim. The walls are covered in erratic scribbling, which upon further inspection appears to be passages from <u>The King in Yellow</u>.",
-        "name": "Patient Confinement",
-        "subname": "Daniel's Cell",
-        "text": "<b>Forced</b> - After Patient Confinement is revealed: Advance to act 2b.",
+        "flavor": "La cellule sans fenêtre de Daniel est sombre et humide. Les murs sont couverts d'écritures erratiques qui, après inspection, se révèlent être des passages du <u>Roi en Jaune</u>.",
+        "name": "Cellule d'Isolement",
+        "subname": "Cellule de Daniel",
+        "text": "<b>Forcé</b> - Après avoir révélé cette Cellule d'Isolement: Avancez à l'Acte 2b.",
         "traits": "Asile d'Arkham.",
-        "back_flavor": "The heavy metal door is firmly shut and locked from the outside. The thin slit that would allow you to peer inside the cell is stuck.",
-        "back_text": "As an additional cost to enter Patient Confinement, you must spend 1 clue."
+        "back_flavor": "La lourde porte de métal est olidement fermée et verrouillé de l'extérieur. l'étroit interstice qui vous permettrait de voir à l'intérieur de la cellule est obstruée.",
+        "back_text": "Vous devez dépenser 1 indice en tant que coût supplémentaire pour entrer dans la Cellule d'Isolement."
     },
     {
         "code": "03179",
-        "name": "Patient Confinement",
-        "subname": "Occupied Cell",
-        "text": "[action]: Test [combat] (2) to release the patient here from his bonds. If you succeed, he howls like a wolf and tears off through the basement; remember that you \"released a dangerous patient.\"",
+        "name": "Cellule d'Isolement",
+        "subname": "Cellule Occupée",
+        "text": "[action]: Effectuez un test de [combat] (2) pour libérer le patient de cette cellule de ses liens. En cas de réussite, il hurle comme un loup et sort en trombe du sous-sol; souvenez-vous que vous avez \"libéré un patient dangereux.\"",
         "traits": "Asile d'Arkham.",
-        "back_flavor": "The heavy metal door is firmly shut and locked from the outside. The thin slit that would allow you to peer inside the cell is stuck.",
-        "back_text": "As an additional cost to enter Patient Confinement, you must spend 1 clue."
+        "back_flavor": "La lourde porte de métal est olidement fermée et verrouillé de l'extérieur. l'étroit interstice qui vous permettrait de voir à l'intérieur de la cellule est obstruée.",
+        "back_text": "Vous devez dépenser 1 indice en tant que coût supplémentaire pour entrer dans la Cellule d'Isolement."
     },
     {
         "code": "03180",
-        "flavor": "A chill gloom envelops this windowless cell. Being locked in here for a day would be torturous, let alone for months.",
-        "name": "Patient Confinement",
-        "subname": "Dreary Cell",
-        "text": "[action]: Test [intellect] (2) to speak to the patient here. If you succeed, you are able to interpret her ravings; remember that you \"know the guards' patrols.\"",
+        "flavor": "Une froide obscurité enveloppe cette ellul dépourvue de fenêtres. Être enfermé ici ne serait-ce qu'une journée doit être une torture, alors des mois...",
+        "name": "Cellule d'Isolement",
+        "subname": "Cellule Lugubre",
+        "text": "[action]: Effectuez un test de [intellect] (2) pour parler à la patiente qui occupe cette cellule. En cas de réussite, vous parvenez à interpréter ses divagations; souvenez-vous que vous avez \"pris connaissance des patrouilles de gardes.\"",
         "traits": "Asile d'Arkham.",
-        "back_flavor": "The heavy metal door is firmly shut and locked from the outside. The thin slit that would allow you to peer inside the cell is stuck.",
-        "back_text": "As an additional cost to enter Patient Confinement, you must spend 1 clue."
+        "back_flavor": "La lourde porte de métal est olidement fermée et verrouillé de l'extérieur. l'étroit interstice qui vous permettrait de voir à l'intérieur de la cellule est obstruée.",
+        "back_text": "Vous devez dépenser 1 indice en tant que coût supplémentaire pour entrer dans la Cellule d'Isolement."
     },
     {
         "code": "03181",
-        "name": "Patient Confinement",
-        "subname": "Familiar Cell",
-        "text": "[action]: Test [willpower] (X), where X is the amount of horror on you. If you succeed, you recognize the room; remember that you \"recalled the way out.\"",
+        "name": "Cellule d'Isolement",
+        "subname": "Cellule Familière",
+        "text": "[action]: Effectuez un test de [willpower] (X), X étant le nombre d'horreurs sur vous. En cas de réussite, vous reconnaissez la pièce; souvenez-vous que vous avez \"retrouvé la sortie.\"",
         "traits": "Asile d'Arkham.",
-        "back_flavor": "The heavy metal door is firmly shut and locked from the outside. The thin slit that would allow you to peer inside the cell is stuck.",
-        "back_text": "As an additional cost to enter Patient Confinement, you must spend 1 clue."
+        "back_flavor": "La lourde porte de métal est olidement fermée et verrouillé de l'extérieur. l'étroit interstice qui vous permettrait de voir à l'intérieur de la cellule est obstruée.",
+        "back_text": "Vous devez dépenser 1 indice en tant que coût supplémentaire pour entrer dans la Cellule d'Isolement."
     },
     {
         "code": "03182a",
@@ -214,42 +214,42 @@
     },
     {
         "code": "03183",
-        "name": "Asylum Gorger",
-        "text": "<b>Spawn</b> - Basement Halls.\nChasseur.\nAsylum Gorger cannot make attacks of opportunity, and cannot attack during the same phase it moved from its hunter keyword.",
+        "name": "Dévoreur de l'Asile",
+        "text": "<b>Génération</b> - Couloir du Sous-sol.\nChasseur.\nLe Dévoreur de l'Asile ne peut pas effectuer d'attaque d'opportunité, et il ne peut pas attaquer lors de la même phase au cours de laquelle il s'est déplacé grâce au mot-clé Chasseur.",
         "traits": "Monstre. Abomination."
     },
     {
         "code": "03184",
-        "flavor": "Sometimes the most terrifying of foes is one’s own mind.",
-        "name": "Mad Patient",
-        "text": "<b>Spawn</b> - Nearest Asylum Halls.\n<b>Prey</b> - Most remaining sanity.\n<b>Forced</b> - When you attack Mad Patient: Take 1 horror.",
+        "flavor": "Parfois le plus terrifiant de nos ennemis est notre propre esprit.",
+        "name": "Patiente Folle",
+        "text": "<b>Spawn</b> - Couloir du Sous-sol le plus proche.\n<b>Proie</b> - Santé mentale restante la plus élevée.\n<b>Forcé</b> - Quand vous attaquez la Patiente Folle: subissez 1 horreur.",
         "traits": "Humanoïde. Aliéné."
     },
     {
         "code": "03185",
-        "flavor": "\"What are you doing? I’m not crazy!\"",
-        "name": "Straitjacket",
-        "text": "<b>Revelation</b> - If there is no copy of Straitjacket in your threat area, put Straitjacket into play in your threat area as an asset that takes up a body slot and 2 hand slots. Return each asset in those slots to your hand. This card cannot leave play except by the ability below.\n[action] [action]: Discard Straitjacket.",
+        "flavor": "\"Qu'est -ce que vous faîtes? Je ne suis pas fou!\"",
+        "name": "Camisole de Force",
+        "text": "<b>Révélation</b> - S'il n'y a aucun exemplaire de la Camisole de Force dans votre zone de menace, mettez-la en jeu dans votre zone de menae en tant que soutien qui occupe un emplacement de corps et deux emplacements de main. Renvoyez dans votre main chaque soutien dans ces emplacements. Cete carte ne peu pas quitter le jeu, excepté par la capacité ci-dessous.\n[action] [action]: défaussez la Camisole de Force.",
         "traits": "Objet. Vêtement."
     },
     {
         "code": "03186",
-        "name": "Gift of Madness",
-        "subname": "Pity",
-        "text": "Peril. Hidden.\n<b>Revelation</b> - Secretly add Gift of Madness (Pity) to your hand.\nYou cannot attack [[Lunatic]] enemies.\n[action]: Randomly choose 1 enemy from among the set-aside [[Monster]] enemies and place it beneath the act deck without looking at it. Discard Gift of Madness (Pity) from your hand.",
+        "name": "Don de la Folie",
+        "subname": "Compassion",
+        "text": "Péril. Cachée.\n<b>Révélation</b> - Ajoutez secrètement Don de la Folie (Compassion) à votre main.\nVous ne pouvez pas attaquer les ennemis [[Aliéné]].\n[action]: prenez un ennemi au hasard parmi les ennemis [[Monstre]] et placez-le sous le deck Acte sans le regarder. Défaussez Don de la Folie (Compassion) de votre main.",
         "traits": "Terreur."
     },
     {
         "code": "03187",
-        "name": "Gift of Madness",
-        "subname": "Misery",
-        "text": "Peril. Hidden.\n<b>Revelation</b> - Secretly add Gift of Madness (Misery) to your hand.\nYou cannot trigger [action] abilities on locations.\n[action]: Randomly choose 1 enemy from among the set-aside [[Monster]] enemies and place it beneath the act deck without looking at it. Discard Gift of Madness (Misery) from your hand.",
+        "name": "Don de la Folie",
+        "subname": "Souffrance",
+        "text": "Péril. Cachée.\n<b>Révélation</b> - Ajoutez secrètement Don de la Folie (Souffrance) à votre main.\nVous ne pouvez pas déclencher les capacités [action] des lieux.\n[action]: prenez un ennemi au hasard parmi les ennemis [[Monstre]] et placez-le sous le deck Acte sans le regarder. Défaussez Don de la Folie (Souffrance) de votre main.",
         "traits": "Terreur."
     },
     {
         "code": "03188",
-        "name": "Walls Closing In",
-        "text": "<b>Revelation</b> - Test [willpower] (X), where X is the shroud value of your location. If you fail, you must either take 1 horror for each point you failed by, or randomly choose 1 enemy from among the set-aside [[Monster]] enemies and place it beneath the act deck without looking at it.",
+        "name": "Les Murs se Referment",
+        "text": "<b>Révélation</b> - Effectuez un test de [willpower] (X), X étant la valeur occulte de votre lieu. En cas d'échec, vous devez soit subir 1 horreur pour chaque point manquant, soit prendre un ennemi au hasard parmi les ennemis [[Monstre]] mis de côté et le placer sous le deck Acte sans le regarder.",
         "traits": "Terreur."
     }
 ]
