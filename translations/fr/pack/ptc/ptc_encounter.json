@@ -7,20 +7,20 @@
     },
     {
         "code": "03044",
-        "flavor": "The theatre is eerily silent. The old wooden floor creaks beneath your feet, and a light rain gently patters on the roof as you explore the auditorium. There are more rotting corpses among the seats, and the rest of the crowd has vanished…",
-        "name": "The Third Act",
-        "back_name": "The Emissary's Message",
-        "back_flavor": "Abruptly, the malformed body of an unnatural nightmare slams onto the stage, its slithering tendrils reaching into the aisles. It opens its maw and lets out a shrill, piercing song. The melody is uncanny; the notes sear into your mind. Pain pounds in your forehead, and blood runs from your ears.",
-        "back_text": "Search all set-aside cards and the victory display for the Royal Emissary enemy, and spawn it in the Theatre."
+        "flavor": "Le théâtre est étrangement silencieux. Seuls le craquement du vieux parquet et le léger crépitement de la pluie sur le toit viennent briser le silence pendant que vous explorez l'auditorium. Vous trouvez d'autres cadavres pourrisants parmi les sièges, mais le reste du public a disparu…",
+        "name": "Le Troisième Acte",
+        "back_name": "Le Message de l'Émissaire",
+        "back_flavor": "Soudain, une créature difforme et cauchemardesque surgit sur la scène, ses tentacules rampant jusque dans les allées. Elle ouvre sa mâchoire et laisse échapper un chant strident. La mélodie est irréelle ; les notes se gravent dans votre esprit. Une douleur vous martèle le front et du sang coule de vos oreilles.",
+        "back_text": "Cherchez l'ennemi Émissaire Royal parmi les cartes hors jeu ou dans la pile de victoire, et générez-le dans le Théâtre."
     },
     {
         "code": "03045",
-        "flavor": "The creature’s song echoes relentlessly throughout the halls of the theatre. The melody repeats again and again, yet somehow, never the same note twice.",
-        "name": "Encore",
-        "text": "<b>Forced</b> - After Royal Emissary is added to the victory display: Remove all doom from play and reset the agenda deck to agenda 1a. Then, place 3 doom on that agenda.",
-        "back_name": "\"Exit Now\"",
-        "back_flavor": "The song grows louder and louder, until it drowns out all of your thoughts. You collapse to the floor and cover your ears, but try as you might, you cannot muffle the intensity of the creature's awful voice. The whole world threatens to close around you, until at last you hear a discordant phrase throughout the melody: \"EXIT NOW.\"",
-        "back_text": "Each investigator takes 100 horror <i>(cannot be prevented)</i>."
+        "flavor": "Le chant de la créature résonne inlassablement à travers les couloirs du théâtre. La mélodie se répête encore et encore mais, étrangement vous n'entendez jamais deux fois la même note.",
+        "name": "Rappel",
+        "text": "<b>Forcé</b> - Après que l'Émissaire Royale est ajouté la pile de victoire : retirez toutes les fatalités en jeu et réinitialisez le deck Intrigue à l'Intrigue 1a. Ensuite, placez 3 fatalités sur cette Intrigue 1a.",
+        "back_name": "\"Sortez Maintenant\"",
+        "back_flavor": "Le chant s'amplifie jusqu'à noyer toutes vos autres pensées, vous vous effondrez sur le sol en couvrant vos oreilles, mais rien n'y fait : vous ne parvenez pas à étouffer l'intensité de l'affreuse voix de la créature. Vous avez l'impression que le monde entier va se refermer sur vous jusqu'à ce que, enfin vous distinguiez une phrase intelligible au sein de la mélodie: \"SORTEZ MAINTENANT.\"",
+        "back_text": "Chaque investigateur subit 100 horreurs <i>(ne peuvent pas être annulées)</i>."
     },
     {
         "code": "03046",
