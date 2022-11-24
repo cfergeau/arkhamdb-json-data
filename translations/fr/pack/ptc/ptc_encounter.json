@@ -24,100 +24,100 @@
     },
     {
         "code": "03046",
-        "flavor": "You pinch yourself to see if you are dreaming, and sure enough, your skin stings and reddens. You take a few deep breaths and try to think rationally. Whatever is going on, you must explore the theatre to learn the truth of the matter.",
-        "name": "Awakening",
-        "back_name": "His Final Bow",
-        "back_flavor": "A shadow creeps along the wall beside you, and your heart leaps into your throat. You turn, and a figure flits away just out of sight. Either your mind is playing tricks on you, or someone else is in the theatre.\nYou follow the direction of the shadow, rounding a nearby corner. At the far end of the hall, he stands awaiting you: a man in an elegant black suit, his face covered by a pale mask. Though his attire has changed, you instantly recognize him as the actor who played the role of the Stranger - one of the characters from <u>The King in Yellow</u>. He turns and disappears through an open doorway, as if taunting you to follow.",
-        "back_text": "Choose one of the set-aside locations, at random. Put that location into play, and spawn the set-aside The Man in the Pallid Mask enemy at that location <i>(instead of his normal spawn location)</i>.\nAdvance to one of the 3 copies of act 2a, at random. Remove the other 2 copies of act 2a from the game without looking at them."
+        "flavor": "Vous vous pincez pour vérifier que vous n'êtes pas en train de rêver. Douleur et rougeur sont bien réelles. Vous prenez une profonde inspiration et tentez de réfléchir de manière rationnelle. Quoiqu'il soit en train de se passer, vous devez explorer le théatre pour découvrir la vérité.",
+        "name": "Réveil",
+        "back_name": "Sa Dernière Révérence",
+        "back_flavor": "Une ombre rampe le long du mur derrière vous, et votre coeur manque de s'arrêter. Vous faites volte-face et une silhouette disparaît de votre champ de vision. Soit votre esprit vous joue des tours, soit vous n'êtes pas seul dans le théâtre. Vous suivez la direction de l'ombre, tournant à l'angle le plus proche. À l'autre bout du corridor se tient un homme qui semble vous attendre. Il porte un élégant costume noir, et son visage est couvert d'un masque pâle. Bien qu'il ait changé d'atours, vous reconnaissez immédiatement l'acteur qui jouait le rôle de l'Étranger - l'un des personnages du Roi en Jaune. Il se détourne et disparaît dans l'embrasure d'une porte, comme s'il vous mettait au défi de la suivre.",
+        "back_text": "Prenez au hasard l'un des lieux mis de coté. Mettez ce lieu en jeu et générez-y L'Homme au Masque Blême <i>(au lieu de son lieu de génération normal)</i>.\nAvancez à l'un des 3 exemplaires de l'Acte 2a pris au hasard. Retirez de la partie les 2 autres exemplaires de l'Acte 2a sans les regarder."
     },
     {
         "code": "03047a",
-        "flavor": "The mysterious Stranger from <u>The King in Yellow</u> might know something about what happened during the intermission. You must find and confront him if you are to discover the truth.",
-        "name": "The Stranger",
-        "text": "<b>Objective</b> - When The Man in the Pallid Mask would be discarded from play, advance.",
-        "back_name": "A City Aflame",
-        "back_flavor": "As you face off with the Stranger, you get the sense that he is grinning beneath his pale, faceless mask. \"Where is everyone?\" you ask, but he does not respond. \"What is going on?\" He remains silent and steps back as you approach, until his back is against the corner of the room. You feel intense heat behind you, and you turn to see flames roaring throughout the auditorium. You turn back to the Stranger, but he is gone.",
-        "back_text": "Instead of discarding The Man in the Pallid Mask, move him to the Lobby.\nAdd 2 [cultist] tokens to the chaos bag.\nPlace 1 horror on the Theatre. Until the end of the scenario, horror on locations represents spreading flames, and each location with horror gains: \"<b>Forced</b> - After you enter this location or end your turn at this location: Test [agility] (3). If you fail, take 1 damage. (Limit once per round.)\"\nKeep this card next to the act deck as a reminder, and advance to act 3a."
+        "flavor": "Le mystérieux Étranger du <u>Roi en Jaune</u> sait peut-être quelque chose sur ce qui c'est passé durant l'entracte. Vous devez le trouver et l'affronter si vous voulez découvrir la vérité.",
+        "name": "L'Étranger",
+        "text": "<b>Objectif</b> - Quand L'Homme au Masque Blême devrait être défaussé du jeu, avancez.",
+        "back_name": "Une Ville Embrasée",
+        "back_flavor": "Vous faîtes enfin face à l'Étranger, qui donne l'impression de sourire sous son masque livide et sans visage. \« Où sont les gens ?\», lui demandez-vous, mais il ne répond pas. \« Que se passe-t-il ? \» Il reste silencieux et recule à mesure que vous approchez, jusqu' à que ce que son dos touche le coin de la pièce. Vous sentez alors une intense chaleur derrière vous et faites demi-tour pour voir les flammes vrombir dans l'auditorium. Vous vous retournez, mais l'Étranger a disparu.",
+        "back_text": "Au lieu de défausser L'Homme au Masque Blême, déplacez-le dans le Hall d'Entrée.\nAjoutez 2 pions [cultist] à la réserve du Chaos.\nPlacez 1 horreur sur le Théâtre. Jusqu'à la fin du scénario, l'horreur sur les lieux représente l'incendie qui s'étend et chaque lieu avec de l'horreur gagne : \« <b>Forcé</b> - Après être entré ou avoir terminé votre tour dans ce lieu : effectuez un test de [agility] (3). En cas d'échec, subissez 1 dégât. (Limite d'une fois par round.) \»\nGardez cette carte comme aide-mémoire à côté du deck Acte et avancez à l'Acte 3a."
     },
     {
         "code": "03047b",
-        "flavor": "The mysterious Stranger from <u>The King in Yellow</u> might know something about what happened during the intermission. You must find and confront him if you are to discover the truth.",
-        "name": "The Stranger",
-        "text": "<b>Objective</b> - When The Man in the Pallid Mask would be discarded from play, advance.",
-        "back_name": "The Path is Mine",
-        "back_flavor": "As you face off with the Stranger, you get the sense that he is grinning beneath his pale, faceless mask. \"Where is everyone?\" you ask, but he does not respond. \"What is going on?\" He remains silent and steps back as you approach, until his back is against the corner of the room. Inexplicably, he continues to back away, and his body melds into the wall behind him. Erupting from where he stood is a growing mass of viscous ooze.",
-        "back_text": "Instead of discarding The Man in the Pallid Mask, move him to the Lobby.\nAdd 2 [tablet] tokens to the chaos bag.\nPlace 1 horror on the location The Man in the Pallid Mask was moved from. Until the end of the scenario, horror on locations represents the advancing ooze, and each location with horror gains: \"<b>Forced</b> - After you leave this location: Test [agility] (4). If you fail, take 1 horror and 1 damage.\"\nKeep this card next to the act deck as a reminder, and advance to act 3a."
+        "flavor": "Le mystérieux Étranger du <u>Roi en Jaune</u> sait peut-être quelque chose sur ce qui c'est passé durant l'entracte. Vous devez le trouver et l'affronter si vous voulez découvrir la vérité.",
+        "name": "L'Étranger",
+        "text": "<b>Objectif</b> - Quand L'Homme au Masque Blême devrait être défaussé du jeu, avancez.",
+        "back_name": "Sur la Voie",
+        "back_flavor": "Vous faîtes enfin face à l'Étranger, qui donne l'impression de sourire sous son masque livide et sans visage. \« Où sont les gens ?\», lui demandez-vous, mais il ne répond pas. \« Que se passe-t-il ? \» Il reste silencieux et recule à mesure que vous approchez, jusqu' à que ce que son dos touche le coin de la pièce. Inexplicablement, il continue de reculer et son corps se fond dans le mur derrière lui. Un liquide visqueux jaillit de l'endroit où il se tenait et commence à se répandre.",
+        "back_text": "Au lieu de défausser L'Homme au Masque Blême, déplacez-le dans le Hall d'Entrée.\nAjoutez 2 pions [tablet] à la réserve du Chaos.\nPlacez 1 horreur sur le lieu d'où L'Homme au Masque Blême a été déplacé. Jusqu'à la fin du scénario, l'horreur sur les lieux représente le suintement visqueux qui s'étend et chaque lieu avec de l'horreur gagne : \« <b>Forcé</b> - Après être entré ou avoir terminé votre tour dans ce lieu : effectuez un test de [agility] (4). En cas d'échec, subissez 1 dégât et 1 horreur. \»\nGardez cette carte comme aide-mémoire à côté du deck Acte et avancez à l'Acte 3a."
     },
     {
         "code": "03047c",
-        "flavor": "The mysterious Stranger from <u>The King in Yellow</u> might know something about what happened during the intermission. You must find and confront him if you are to discover the truth.",
-        "name": "The Stranger",
-        "text": "<b>Objective</b> - When The Man in the Pallid Mask would be discarded from play, advance.",
-        "back_name": "The Shores of Hali",
-        "back_flavor": "As you face off with the Stranger, you get the sense that he is grinning beneath his pale, faceless mask. \"Where is everyone?\" you ask, but he does not respond. \"What is going on?\" He remains silent and steps back as you approach, until his back is against the corner of the room. You spin in shock as the windows shatter, and a deluge of cold salt water floods the room. You turn back to the Stranger, but he is gone.",
-        "back_text": "Instead of discarding The Man in the Pallid Mask, move him to the Lobby.\nAdd 2 [elder_thing] tokens to the chaos bag.\nPlace 1 horror on each [[Private]] location. Until the end of the scenario, horror on locations represents flooding water, and each location with horror gains: \"<b>Forced</b> - When you would leave this location: Test [agility] (2). If you fail, take 1 damage and cancel the effects of the move. (Limit once per round.)\"\nKeep this card next to the act deck as a reminder, and advance to act 3a."
+        "flavor": "Le mystérieux Étranger du <u>Roi en Jaune</u> sait peut-être quelque chose sur ce qui c'est passé durant l'entracte. Vous devez le trouver et l'affronter si vous voulez découvrir la vérité.",
+        "name": "L'Étranger",
+        "text": "<b>Objectif</b> - Quand L'Homme au Masque Blême devrait être défaussé du jeu, avancez.",
+        "back_name": "Les Rives du Lac de Hali",
+        "back_flavor": "Vous faîtes enfin face à l'Étranger, qui donne l'impression de sourire sous son masque livide et sans visage. \« Où sont les gens ?\», lui demandez-vous, mais il ne répond pas. \« Que se passe-t-il ? \» Il reste silencieux et recule à mesure que vous approchez, jusqu' à que ce que son dos touche le coin de la pièce. Vous vous retournez brusquement en entendant une fenêtre voler en éclats , et un déluge d'eau froide et salée inonde la pièce. Vous vous tournez à nouveau vers l'Étrange mais il a disparu.",
+        "back_text": "Au lieu de défausser L'Homme au Masque Blême, déplacez-le dans le Hall d'Entrée.\nAjoutez 2 pions [elder_thing] à la réserve du Chaos.\nPlacez 1 horreur sur chaque lieu [[Privé]]. Jusqu'à la fin du scénario, l'horreur sur les lieux représente le déluge d'eau, et chaque lieu avec de l'horreur gagne : \« <b>Forcé</b> - Quand vous devriez quitter ce lieu : effectuez un test de [agility] (2). En cas d'échec, subissez 1 dégât et annulez le déplacement. (Limite d'une fois par round.) \»\nGardez cette carte comme aide-mémoire à côté du deck Acte et avancez à l'Acte 3a."
     },
     {
         "code": "03048",
-        "flavor": "The Stranger must know the way out. You have to follow him!",
-        "name": "Curtain Call",
-        "text": "While The Man in the Pallid Mask is not in play, the Lobby gains: \"[action]: <b>Resign.</b>\"\n<b>Forced</b> - At the end of the round: Place 1 horror on each location with no horror that is connected to a location with horror.\n<b>Objective</b> - If each undefeated investigator has resigned, advance.",
-        "back_name": "Escaping the Theatre",
-        "back_flavor": "The Stranger gives you a slight bow as he steps through the lobby's front entrance, opening a glass door that was not there a moment before. A sudden cacophony of noise erupts around you, and you fear that the building has only seconds before it is destroyed. You flee, crashing through the front doors and leaving the ruined theatre in your wake.",
-        "back_text": "The investigators must decide (choose one):\n- We have to warn the police about what's going on! <b>(→R1)</b>\n- The police won't believe us. We have to solve this mystery on our own. <b>(→R2)</b>"
+        "flavor": "L'Étranger doit connaître le chemin vers la sortie. Vous devez le suivre!",
+        "name": "Baisser de Rideau",
+        "text": "Tant que L'Homme au Masque Blême, le Hall d'Entrée gagne : \« [action]: <b>Abandon.</b> \»\n<b>Forcé</b> - A la fin du round : Placez 1 horreur sur chaque lieu sans horreur qui est connexe à un lieu avec de l'horreur.\n<b>Objectif</b> - Si chaque investigateur a abandonné, avancez.",
+        "back_name": "Fuir le Théâtre",
+        "back_flavor": "L'Étranger vous gratifie d'une courte révérence et marche jusqu'à l'entrée principale, ouvrant une porte vitrée qui n'était pas là un instant plus tôt. Une soudaine cacophonie jaillit autour de vous, et vous craignez que le bâtiment ne soit détruit sous peu. Vous fuyez, défonçant la porte d'entrée et laissant le théâtre en ruine dans votre sillage.\nQuelques rues plus loin, vous prenez un moment pour vous reposer et faire le point sur ce dont vous avez été témoin...",
+        "back_text": "Les investigateurs doivent décider (choisir une option) :\n- Nous devons avertir la police de ce qui se passe! <b>(→C1)</b>\n- La police ne nous croira pas. Nous devons résoudre ce mystère par nous-même. <b>(→C2)</b>"
     },
     {
         "code": "03049",
-        "flavor": "To say that the theatre is in disarray would be a profound understatement. The walls and seats, previously polished to a shine, are cracked and caked with dirt. The curtains are tattered, and the set is stained with old blood. You aren't sure what's worse: the smell of rot or the nagging feeling that you've been asleep for a very long time.",
-        "name": "Theatre",
-        "back_flavor": "Must have been one hell of an intermission."
+        "flavor": "Dire que le théâtre est en désordre serait un profond euphémisme. Les murs et sièges, naguère lustrés, sont sales et déchirés. Les rideaux sont lacérés et la scène est maculée de vieilles traces de sang. Vous ignorez ce qui est le pire, l'odeur de la pourriture ou l'irrépressible sensation d'avoir dormi pendant très longtemps.",
+        "name": "Théâtre",
+        "back_flavor": "Voilà qui a dû être un sacré entracte."
     },
     {
         "code": "03050",
-        "flavor": "The wide doors that led to the streets of Arkham are somehow gone, as if they were never there.",
-        "name": "Lobby",
-        "text": "<b>Forced</b> - When Lobby is revealed: Put 2 of the set-aside Lobby Doorway locations into play, at random.\n[action] [action]: Draw 3 cards.",
-        "back_flavor": "Through the tall glass doors leading into the lobby, you can see that this room isn’t nearly as dilapidated as the auditorium. Signs promoting <u>The King in Yellow</u> taunt you from inside."
+        "flavor": "Les larges portes menant vers les rues d'Arkham ont disparu, comme si elle n'avaient jamais existé.",
+        "name": "Hall d'Entrée",
+        "text": "<b>Forcé</b> - Quand le Hall d'Entrée est révélé : mettez en jeu 2 lieux Porte du Hall d'Entrée.\n[action] [action] : Piochez 3 cartes.",
+        "back_flavor": "À travers les grandes portes vitrées menant dans le hall d'entrée, vous pouvez voir que cette pièce est loin d'être en aussi piteux état que l'auditorium. Des affiches publicitaires pour <u>Le Roi en Jaune</u> vous narguent depuis l'intérieur."
     },
     {
         "code": "03051",
-        "flavor": "To your disappointment, the balcony sections are much like the ground floor below, although every now and then you think you spot a figure moving silently in the aisles.",
-        "name": "Balcony",
-        "text": "<b>Forced</b> - After you perform a move action during which you move from the Balcony to the Theatre: Take 2 damage.",
-        "back_flavor": "A carpeted staircase leads up into the balcony. Somehow, a hot draft is blowing down through the steep passageway."
+        "flavor": "À votre grand désarroi, les balcons sont globalement dans le même état que le rez-de-chaussée bien que, de temps en temps,vous pensiez apercevoir une silhouette qui se déplace en silence dans les allées.",
+        "name": "Balcon",
+        "text": "<b>Forcé</b> - Après que vous avez effectué une action Se Déplacer lors de laquelle vous vous êtes déplacé du Balcon vers le Théâtre : subissez 2 dégâts.",
+        "back_flavor": "Un escalier recouvert de moquette mène jusqu'au balcon. Curieusement, un souffle d'air chaud circule à travers l'étroite coursive."
     },
     {
         "code": "03052",
-        "name": "Backstage",
-        "text": "<b>Forced</b> - When Backstage is revealed: Put 2 of the set-aside Backstage Doorway locations into play, at random.\nWhile you are at Backstage, each hidden treachery in your hand counts as 3 cards instead of 1 for the purposes of counting your hand size.",
-        "back_flavor": "The set is different from what you remember of the play’s first act, decorated with a backdrop of an unsettling sunset."
+        "name": "Coulisses",
+        "text": "<b>Forcé</b> - Quand les Coulisses sont revélées: mettez en jeu 2 des lieux Portes des Coulisses pris au hasard.\nTant que vous êtes dans les Coulisses, chaque traîtrise Cachée dans votre main compte comme 3 cartes au lieu 1 lorsqu'il s'agit de calculer la taille de votre main.",
+        "back_flavor": "Le décor est différent de ce dont vous vous rappelez du premier acte de la pièce. La toile de fond représente un troublant coucher de soleil."
     },
     {
         "code": "03053",
-        "flavor": "At the top of a narrow, claustrophobic staircase, you find the lighting crew's closet-like booth, stationed above the balcony. Expensive lighting equipment and several heavy spotlights dominate the cramped room.",
-        "name": "Lighting Box",
-        "text": "While you are in the Lighting Box, increase the resource cost of each card in your hand by 2.",
+        "flavor": "Au sommet d'un escalier raide et oppressant, vous découvrez la minuscule cabine de l'équipe d'éclairagistes, juste au-dessus des balcons. Du matériel d'éclairage coûteux et quelques lourds projecteurs emplissent la pièce exiguë",
+        "name": "Régie-Lumière",
+        "text": "Tant que vous êtes dans la Régie-Lumière, augmentez de 2 le coût en ressources de chaque carte dans votre main.",
         "traits": "Privé.",
-        "back_name": "Lobby Doorway",
-        "back_flavor": "An ornate wooden door leads into one of the front areas of the theatre."
+        "back_name": "Porte du Hall d'Entrée",
+        "back_flavor": "Une porte ornementée en bois mène vers l'une des zones à l'entrée du théâtre."
     },
     {
         "code": "03054",
-        "flavor": "Raindrops pelt your clothing as you step into the box office. It takes you a moment before you remember you purchased your ticket indoors, and you realize it is somehow raining through the roof of the hall.",
-        "name": "Box Office",
-        "text": "[action]: Gain 5 resources. Remember that you \"stole from the box office.\" (Group limit once per game.)",
+        "flavor": "Des gouttes de pluies trempent vos vêtements tandis que vous traversez la billeterie. Il vous faut un moment pour vous rappeler que vous étiez bel et bien à l'intérieur lorsque vous avez acheté vos billets. Vous réalisez alors qu'il est en train de pleuvoir à travers le toit du hall.",
+        "name": "Billeterie",
+        "text": "[action]: Gagnez 5 ressources. Souvenez-vous que vous avez \« volé dans la caisse \». (Limite collective d'une fois par partie.)",
         "traits": "Privé.",
-        "back_name": "Lobby Doorway",
-        "back_flavor": "An ornate wooden door leads into one of the front areas of the theatre."
+        "back_name": "Porte du Hall d'Entrée",
+        "back_flavor": "Une porte ornementée en bois mène vers l'une des zones à l'entrée du théâtre."
     },
     {
         "code": "03055",
-        "flavor": "This green room is supposed to be a relaxing lounge for tense performers, but you imagine anyone trying to find a moment's rest in this cluttered pigsty would come up shortchanged.",
-        "name": "Green Room",
-        "text": "[action] <b>Investigate.</b> You get +3 [intellect] for this investigation. After this skill test ends, discard each card in your hand.",
+        "flavor": "Cette loge est censée être un lieu relaxant pour les acteurs tendus, mais vous peinez à imaginer qui que ce soit réussissant à trouver un moment de sérénité dans le fratras de cette porcherie.",
+        "name": "Loge des Artistes",
+        "text": "[action] <b>Enquêter.</b> vous gagnez +3 [intellect] pour cette enquête. Après la fin de ce test, défaussez chaque carte de votre main.",
         "traits": "Privé.",
-        "back_name": "Lobby Doorway",
-        "back_flavor": "An ornate wooden door leads into one of the front areas of the theatre."
+        "back_name": "Porte du Hall d'Entrée",
+        "back_flavor": "Une porte ornementée en bois mène vers l'une des zones à l'entrée du théâtre."
     },
     {
         "code": "03056",
