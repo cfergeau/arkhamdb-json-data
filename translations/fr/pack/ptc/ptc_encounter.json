@@ -121,30 +121,30 @@
     },
     {
         "code": "03056",
-        "flavor": "The cast's dressing room is filled with all manner of costumes and accessories, but it's the tattered yellow robe at the far end of the room that catches your attention. It looks too torn and disheveled to be worn, yet it is enticing all the same.",
-        "name": "Dressing Room",
-        "text": "[action] [action] [action]: Heal 3 horror.",
+        "flavor": "La salle d'habillage de la troupe regorge de toutes sortes de costumes et d'accessoires, pourtant c'est la robe jaune en lambeaux tout au bout de la pièce qui attire votre attention. Elle semble trop déchirée et usée pour être portée, mais elle vous captive malgré tout.",
+        "name": "Salle d'Habillage",
+        "text": "[action] [action] [action] : Soignez 3 horreurs.",
         "traits": "Privé.",
-        "back_name": "Backstage Doorway",
-        "back_flavor": "A simple wooden door leads into the back of the theatre, far from the prying eyes of patrons."
+        "back_name": "Porte des Coulisses",
+        "back_flavor": "Une simple porte en bois mène à l'arrière du théâtre, loin du regard indiscret du public."
     },
     {
         "code": "03057",
-        "flavor": "As you enter this room, silently confronting you is a giant symbol torn into the wallpaper. You cannot tell whether the wall was deliberately vandalized or the material peeled away in the strange pattern on its own.",
-        "name": "Rehearsal Room",
-        "text": "<b>Forced</b> - After you succeed by 2 or more while investigating the Rehearsal Room: Take 1 horror.",
+        "flavor": "En entrant dans cette pièce, vous vous retrouvez nez à nez avec un immense symbole gravé dans le papier-peint. Vous ne sauriez dire si la tapisserie a été délibérement vandalisée ou si le tissu se décolle en formant cet étrange motif de lui-même.",
+        "name": "Salle de Répétition",
+        "text": "<b>Forced</b> - Après avoir réussi un test de compétence avec une différence de 2 ou plus pendant que vous enquêtiez dans la Salle de Répétition : subissez 1 horreur.",
         "traits": "Privé.",
-        "back_name": "Backstage Doorway",
-        "back_flavor": "A simple wooden door leads into the back of the theatre, far from the prying eyes of patrons."
+        "back_name": "Porte des Coulisses",
+        "back_flavor": "Une simple porte en bois mène à l'arrière du théâtre, loin du regard indiscret du public."
     },
     {
         "code": "03058",
-        "flavor": "Clearly, nobody has cleaned out the prop area beneath the stage in months",
-        "name": "Trap Room",
-        "text": "<b>Forced</b> - After you reveal the Trap Room: Search the encounter deck and discard pile for 1 copy of Swarm of Rats and put it into play engaged with you (2 copies instead if there are 3 or 4 investigators in the game). Shuffle the encounter deck if it is searched.",
+        "flavor": "Il est clair que cela fait des mois que personne n'a nettoyé la réserve d'accessoires située sous la scène",
+        "name": "Sous la Trappe",
+        "text": "<b>Forcé</b> - Après avoir révélé Sous la Trappe : cherchez un exemplaire de Nuée de Rats dans le deck Rencontre, et mettez-le en jeu engagé avec vous (2 exemplaires à la place s'il y a 3 ou  investigateurs dans la partie). Mélangez le deck Rencontre si vous avez cherché dedans.",
         "traits": "Privé.",
-        "back_name": "Backstage Doorway",
-        "back_flavor": "A simple wooden door leads into the back of the theatre, far from the prying eyes of patrons."
+        "back_name": "Porte des Coulisses",
+        "back_flavor": "Une simple porte en bois mène à l'arrière du théâtre, loin du regard indiscret du public."
     },
     {
         "code": "03059",
@@ -155,9 +155,9 @@
     },
     {
         "code": "03060",
-        "name": "Royal Emissary",
-        "subname": "Messenger from Aldebaran",
-        "text": "<b>Prey</b> - Lowest [willpower].\nMassive. Chasseur. Retaliate.\n<b>Forced</b> - At the end of the enemy phase: Each investigator at Royal Emissary's location or a connecting location takes 1 horror.",
+        "name": "Émissaire Royal",
+        "subname": "Messager d'Aldébaran",
+        "text": "<b>Proie</b> - [willpower] la plus faible.\nMassif. Chasseur. Riposte.\n<b>Forcé</b> - Á la fin de la phase des ennemis: Chaque investigateur dans le lieu de l'Émissaire Royal ou dans un lieu connexe subit 1 horreur.",
         "traits": "Monstre. Élite."
     },
     {
@@ -168,97 +168,97 @@
     },
     {
         "code": "03062",
-        "flavor": "As you pull up to the manor, you notice that something is wrong. A trail of blood leads up the porch steps, and the front door is smashed. Muted music comes from within the house, its warped and discordant notes painful to your ears. Has the madness of <u>The King in Yellow</u> already made its way here?",
-        "name": "Fashionably Late",
-        "back_name": "The Final Guest",
-        "back_flavor": "\"Ah, if it isn't our final guest,\" the doorman announces. \"Miss Devine, your presence here has been long awaited.\" The woman wears a devilish dress and similar grin. You swear you've seen the symbol on her amulet before. \"Well, now the <u>real</u> party can begin,\" she declares, then heads off to mingle with the other party-goers.",
-        "back_text": "Find the [[Bystander]] asset with the fewest clues on it. Spawn the set-aside Dianne Devine enemy at that asset's location.\nShuffle the encounter discard pile into the encounter deck."
+        "flavor": "En vous approchant du manoir, vous remarquez que quelque chose cloche. Une traînée de sang mène jusqu'aux marches du porche et la porte d'entrée a été forcée. Une musique sourde provient de l'intérieur de la maison, ses notes fausses et discordantes agressent vos oreilles. La folie du <u>Roi en Jaune</u> aurait-elle déjà envahi ces lieux?",
+        "name": "légèrement en Retard",
+        "back_name": "La Dernière Invitée",
+        "back_flavor": "\« Àh, voilà enfin notre dernière invitée \»,annonce le portier. \« Mademoiselle Devine, nous attedions votre venue. \» La femme porte une robe sulfureuse et affiche un sourire malicieux. Vous jureriez avoir déjà vu le symbole sur son amulette. \« Bien, la <u>véritable</u> fête peut commencer \» déclare-t-elle, avant de se mêler aux autres invités.",
+        "back_text": "Trouvez le soutien [[Passant]] avec le moins d'indices sur lui. Générez l'ennemi Dianne Devine dans le lieu de ce soutien.\nMélangez la pile de défausse Rencontre dans le deck de Rencontre."
     },
     {
         "code": "03063",
-        "flavor": "More and more, this place continues to fall into madness, transforming before your very eyes…",
-        "name": "The Terrifying Truth",
-        "text": "<b>Forced</b> - When this agenda would advance by reaching its doom threshold: Instead, remove all doom in play and randomly resolve one of the Sickening Reality cards underneath the scenario reference card. If there are no cards underneath the scenario reference card, advance to agenda 2b instead.",
-        "back_name": "If You Can't Beat Them…",
-        "back_flavor": "It's all in your head. It must be. How else could you explain what is going on around you? You've had one too many drinks, and your mind is playing tricks on you. Everybody is having so much fun - all they want is for you to join them.",
-        "back_text": "<b>(→R3)</b>"
+        "flavor": "petit à petit, cet endroit continue de s'enfoncer dans la folie, se transformant juste sous vos yeux…",
+        "name": "L'Effrayante Vérité",
+        "text": "<b>Forcé</b> - Quand cette intrigue devrait avancer en atteignant son seuil de fatalité : à la place, retirez toutes les fatalité en jeu et résolvez l'une des cartes Effroyable Réalité prise au hasard parmi celles placées sous la carte de référence du scénario. S'il n'y a pas de carte sous la carte de référence du scénario, avancez à l'Intrigue 2b à la place.",
+        "back_name": "Si on ne Peut pas les Battre…",
+        "back_flavor": "Tout est dans votre tête. C'est la seule possibilité. Comment expliquer autrement ce qui se passe autour de vous? Vous avez trop bu et votre esprit vous joue des tours. Tout le monde s'amuse tellement - et vous brûlez d'envie de les rejoindre.",
+        "back_text": "<b>(→C3)</b>"
     },
     {
         "code": "03064",
-        "flavor": "This isn’t a party: it’s a mad house. But for some reason, the guests are too deluded to notice. Very few of them are sane, and many are themselves horrors to your eye. Perhaps you can talk to them to learn more about <u>The King in Yellow</u>.",
-        "name": "Discovering the Truth",
-        "text": "<b>Forced</b> - When an investigator is eliminated <i>(by defeat or resignation)</i>: Place each of that investigator's clues on this act, instead of placing them at his or her location.\n<b>Objective</b> - Find as many clues as you can, then get out of this awful place!",
+        "flavor": "Ce n'est pas une fête, c'est une maison de fou. Mais pour d'obscures raison, les invités sont trop aveuglés pour s'en rendre compte. Peu d'entre eux semblent sains d'esprit et beaucoup vous paraissent meme effrayants. Peut-être pourriez-vous engager la conversation pour en apprendre plus sur <u>Le Roi en Jaune</u>.",
+        "name": "Découvrir la Vérité",
+        "text": "<b>Forcé</b> - Quand un investigateur est éliminé <i>(en étant vaincu ou en abandonnant)</i> : placez tous les indices de cet investigateur sur cet acte au lieu de les placer sur son lieu.\n<b>Objectif</b> - Trouvez autant d'indices que vous pouvez et sortez de cet épouvantable endroit!",
         "back_name": "…?",
-        "back_text": "<b>Madness.</b> <i>noun.</i> mad.ness.\nThe state of being mentally ill, especially severely.\n- Extremely foolish behavior.\n- A state of frenzied or chaotic activity.\n- Why are you looking at this side?\n- There is no reason to flip to Act 1b.\n- Flip back to Act 1a."
+        "back_text": "<b>Folie.</b> <i>n.f.</i> fo.lie.\nDérangement de l'esprit, état de maladie mentale, surtout dans les cas les plus graves.\n- Comportement extrêmement étrange.\n- État de frénésie ou activité chaotique.\n- Mais pourquoi regardez-vous cette face?\n- Il n'y a aucune raison de retourner la carte sur l'Acte 1b.\n- Retourner-la sur l'Acte 1a."
     },
     {
         "code": "03065",
-        "flavor": "Constance laughs as the skin begins to slough off her body. Blood trickles from her shedding skin, leaving a trail of crimson on the carpet where she walks. One might expect her to cease functioning with her ribs and organs exposed, but she barely seems to notice.",
-        "name": "Sickening Reality",
-        "text": "Each investigator at Constance Dumaine's location takes 1 horror.\nMove each clue from Constance Dumaine to her location.\nFlip this card to its enemy side, and switch it with the [[Bystander]] asset version of Constance Dumaine, removing that version from the game."
+        "flavor": "Constance se met à rire lorsque sa peau commence à se détacher de son corps. Du sang coule de son épiderme en mue, laissant une traînée cramoisie sur le tapis sur son passage. On aurait pu s'attendre à ce qu'elle trépasse une fois ses côtes et ses organes exposés à l'air libre,mais elle semble à peine s'en rendre compte.",
+        "name": "Effroyable Réalité",
+        "text": "Chaque investigateur dans le lieu de Constance Dumaine subit 1 horreur.\nDéplacez tous les indices sur Constance Dumaine sur son lieu.\nRetournez cette carte sur sa face Ennemie, échangez-la contre la version soutien [[Passant]] de Constance Dumaine, et retirez cette dernière de la partie."
     },
     {
         "code": "03065b",
-        "flavor": "\"What's wrong? Aren't you enjoying yourself?\"",
+        "flavor": "\« Que se passe-t-il? Vous ne vous amusez pas? \»",
         "name": "Constance Dumaine",
-        "subname": "A Little Too Sociable",
-        "text": "Chasseur.\nWhile Constance Dumaine is exhausted, she gets +3 fight.",
+        "subname": "Un Peu Trop Sociable",
+        "text": "Chasseur.\n Tant que Constance Dumaine est inclinée, elle gagne +3 combat.",
         "traits": "Monstre. Aliéné. Élite."
     },
     {
         "code": "03066",
-        "flavor": "Mr. Perry takes another puff from his cigar, and his eyes burn a deep red hue. As he exhales, his skin begins to crack and hardens into stone. Cigar smoke exudes from the fissures in his skin, and the temperature in the room rises dramatically. He clenches his hand around the chair’s armrest, which crumbles to ash in his awful grasp.",
-        "name": "Sickening Reality",
-        "text": "Each investigator at Jordan Perry's location takes 1 horror.\nMove each clue from Jordan Perry to his location.\nFlip this card to its enemy side, and switch it with the [[Bystander]] asset version of Jordan Perry, removing that version from the game."
+        "flavor": "M. Perry tire une autre bouffée sur son cigare et ses yeux se mettent à briller d'une intense lueur rouge. Lorsqu'il expire, son épiderme commence à se craqueler et à durcir comme de la pierre. La fumée du cigare exsude par les fissures de sa peau, et la température de la pièce augment dangereusement. Il saisit l'accoudoir de son fauteuil, qui se retrouve instantanément réduit en cendres.",
+        "name": "Effroyable Réalité",
+        "text": "Chaque investigateur dans le lieu de Jordan Perry subit 1 horreur.\nDéplacez tous les indices sur Jordan Perry sur son lieu.\nRetournez cette carte sur sa face Ennemie, échangez-la contre la version soutien [[Passant]] de Jordan Perry, et retirez cette dernière de la partie."
     },
     {
         "code": "03066b",
-        "flavor": "Cigar smoke permeates the room, causing you to cough and wheeze.",
+        "flavor": "La fumée de cigare imprègne la pièce, vous faisant tousser et gênant votre respiration.",
         "name": "Jordan Perry",
-        "subname": "An Imposing Presence",
-        "text": "Chasseur.\n<b>Forced</b> - At the beginning of the enemy phase: Heal 1 damage from Jordan Perry.",
+        "subname": "Une Présence imposante",
+        "text": "Chasseur.\n<b>Forcé</b> - Au début de la phase des Ennemis: Soignez 1 dégât de Jordan Perry.",
         "traits": "Monstre. Aliéné. Élite."
     },
     {
         "code": "03067",
-        "flavor": "A nearby guest asks Haruko if she designed the dress she is wearing, and she nods and poses for him. As if part of her effort to appear taller, her spine grows and extends upward, separating her torso from the bottom half of her body. Instead of crying out in pain, she smiles at the attention she receives.",
-        "name": "Sickening Reality",
-        "text": "Each investigator at Ishimaru Haruko's location takes 1 horror.\nMove each clue from Ishimaru Haruko to her location.\nFlip this card to its enemy side, and switch it with the [[Bystander]] asset version of Ishimaru Haruko, removing that version from the game."
+        "flavor": "Un invité demande à Haruko si elle a conçu la robe qu'elle porte. Elle acquiesce et prend la pose pour lui. Dans cette effort pour paraître plus grande, sa colonne vertébrale s'allonge démesurément, séparant son torse de la partie inférieure de son corps. Au lieu de hurler de douleur, elle sourit de constater qu'elle est l'objet de tous les regards.",
+        "name": "Effroyable Réalité",
+        "text": "Chaque investigateur dans le lieu de Ishimaru Haruko subit 1 horreur.\nDéplacez tous les indices sur Ishimaru Haruko sur son lieu.\nRetournez cette carte sur sa face Ennemie, échangez-la contre la version soutien [[Passant]] de Ishimaru Haruko, et retirez cette dernière de la partie."
     },
     {
         "code": "03067b",
-        "flavor": "\"Doesn't this dress look gorgeous on me?\"",
+        "flavor": "\« Cette robe n'est-elle pas magnifique sur moi? \»",
         "name": "Ishimaru Haruko",
-        "subname": "Just Skin and Bones",
-        "text": "Chasseur.\n<b>Forced</b> - After you deal damage to Ishimaru Haruko by an effect other than an attack: Draw the top card of the encounter deck.",
+        "subname": "La Peau Sur Les Os",
+        "text": "Chasseur.\n<b>Forcé</b> - Après que vous avez infligé des dégâtsà Ishimaru Haruko par un effet autre qu'une attaque : piochez la carte du dessus du deck Rencontre.",
         "traits": "Monstre. Aliéné. Élite."
     },
     {
         "code": "03068",
-        "flavor": "Sebastien’s passionate debate with another guest turns ugly. His temper transforms not just his demeanor but his body as well. Thick fur sprouts from his skin, along with several bulbous growths that leak pus and blood. His suit tears as his body distorts, bones snapping and muscles bulging. He is as much beast as he is man.",
-        "name": "Sickening Reality",
-        "text": "Each investigator at Sebastien Moreau's location takes 1 horror.\nMove each clue from Sebastien Moreau to his location.\nFlip this card to its enemy side, and switch it with the [[Bystander]] asset version of Sebastien Moreau, removing that version from the game."
+        "flavor": "Le débat passionnée entre Sebastien et un autre invité tourne court. Sa mauveaise humeur ne transforme pas que son attitude, mais également son corps. Une épaisse fourrure pousse sur sa peau, accompagnée d'excroissances bulbeuse desquelles suinte un mélange de pus et de sang. Son costume se déchire à mesure que son corps se déforme. Il est à présent tout aussi bestial qu'humain.",
+        "name": "Effroyable Réalité",
+        "text": "Chaque investigateur dans le lieu de Sebastien Moreau subit 1 horreur.\nDéplacez tous les indices sur Sebastien Moreau sur son lieu.\nRetournez cette carte sur sa face Ennemie, échangez-la contre la version soutien [[Passant]] de Sebastien Moreau, et retirez cette dernière de la partie."
     },
     {
         "code": "03068b",
-        "flavor": "\"Want to be in our next performance?\"",
+        "flavor": "\« Tu veux jouer dans notre prochaine représentation? \»",
         "name": "Sebastien Moreau",
-        "subname": "Savage Hysteria",
-        "text": "Chasseur. Retaliate.\nSebastien Moreau's attacks cannot be canceled.",
+        "subname": "Hystérie Sauvage ",
+        "text": "Chasseur. Riposte.\nLes attaques de Sebastien Moreau ne peuvent pas être annulées.",
         "traits": "Monstre. Aliéné. Élite."
     },
     {
         "code": "03069",
-        "flavor": "\"Encore! Encore!\" the crowd shouts as Ashleigh finishes her final song of the night. Deciding to stay for one last number, she nods to the pianist. The song that follows is excruciating. Her once-beautiful voice is now a wailing screech with unnatural pitch. Her skin has tightened hideously around her bones, and insects begin to eat their way out of her arms and shoulders, crawling over her body. The crowd is loving this final performance.",
-        "name": "Sickening Reality",
-        "text": "Each investigator at Ashleigh Clarke's location takes 1 horror.\nMove each clue from Ashleigh Clarke to her location.\nFlip this card to its enemy side, and switch it with the [[Bystander]] asset version of Ashleigh Clarke, removing that version from the game"
+        "flavor": "\« Bis! Bis! \» scande le public quand Ashleigh achève sa dernière chanson de la soirée. Décidant de rester le temps d'un rappel, elle fait signe au pianiste. La chanson qui suit est insoutenable. Sa voix autrefois si belle n'est plus qu'une stridente lamentation d'une tessiture surnaturelle. Sa peau s'est comme ressérrée contre ses os, et des insectes commencent à lui dévorer les bras et les épaules de l'intérieur, grouillant à travers son corps. Le public adore cette dernière prestation.",
+        "name": "Effroyable Réalité",
+        "text": "Chaque investigateur dans le lieu de Ashleigh Clarke subit 1 horreur.\nDéplacez tous les indices sur Ashleigh Clarke sur son lieu.\nRetournez cette carte sur sa face Ennemie, échangez-la contre la version soutien [[Passant]] de Ashleigh Clarke, et retirez cette dernière de la partie."
     },
     {
         "code": "03069b",
-        "flavor": "\"Songs that the Hyades shall sing,\nWhere flap the tatters of the King,\nMust died unheard in Dim Carcosa.\"",
+        "flavor": "\« Les chansons qu'aux Hyades un jour on chantera,\nLà où flottent en bruissant les guenilles du Roi,\nDoivent mourir sans bruit dans Carcosa. \»",
         "name": "Ashleigh Clarke",
-        "subname": "Songs Die Unheard",
-        "text": "Chasseur.\nEach investigator at Ashleigh Clarke's location does not draw cards during the upkeep phase.",
+        "subname": "Les Chansons Meurent sans Bruit",
+        "text": "Chasseur.\nChaque investigateur dans le lieu de Ashleigh Clarkene pioche pas de carte pendant la phase d'Entretien.",
         "traits": "Monstre. Aliéné. Élite."
     },
     {
