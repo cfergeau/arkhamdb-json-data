@@ -133,80 +133,80 @@
     {
         "code": "03216",
         "name": "Canal Saint-Martin",
-        "text": "[reaction] After you evade an enemy at Canal Saint-Martin: Move that enemy to a connecting location. (Limit once per round.)",
+        "text": "[reaction] Après avoir échappé à un ennemi au Canal Saint-Martin: déplacez cet ennemi vers un lieu connexe. (Limite d'une fois par round.)",
         "traits": "Paris.",
-        "back_flavor": "This underground canal connects the river Seine to the Canal de l’Ourcq. An old, cracked staircase leads down to the canal’s entrance."
+        "back_flavor": "Ce canal souterrain relie la Seine au Canal de l’Ourcq. Un vieil escalier endommagé mène jusqu'à l'entrée du canal."
     },
     {
         "code": "03217",
-        "flavor": "Throughout this region, you cannot shake the feeling that you are being watched. Something along the rooftops ducks just out of sight each time you peer upward.",
+        "flavor": "En traversant ce quartier, vous avez la sensation d'être observé. Le long des toits, quelque chose semble se cacher hors de votre vue chaque fois que vous levez les yeux.",
         "name": "Le Marais",
-        "text": "[reaction] When your turn begins, if you are in Le Marais: Draw 1 card. (Group limit once per round.)",
+        "text": "[reaction] Quand votre tour commence, si vous êtes dans Le Marais : piochez 1 carte(Limite collective d'une fois par round).",
         "traits": "Paris. Voie Ferrée.",
-        "back_flavor": "This historic district has recently become less aristocratic, but the old architectural masterwork remains."
+        "back_flavor": "Ce quartier historique s'est paupérisé, mais la splendeur de son architecture demeure."
     },
     {
         "code": "03218",
-        "flavor": "Throughout this region, you cannot shake the feeling that you are being watched. Something along the rooftops ducks just out of sight each time you peer upward.",
+        "flavor": "En traversant ce quartier, vous avez la sensation d'être observé. Le long des toits, quelque chose semble se cacher hors de votre vue chaque fois que vous levez les yeux.",
         "name": "Le Marais",
-        "text": "<b>Forced</b> - After you enter Le Marais: For the remainder of the round, you cannot leave Le Marais.",
+        "text": "<b>Forcé</b> - Après être entré dans Le Marais : pour le reste du round, vous ne pouvez pas quitter Le Marais.",
         "traits": "Paris. Voie Ferrée.",
-        "back_flavor": "This historic district has recently become less aristocratic, but the old architectural masterwork remains."
+        "back_flavor": "Ce quartier historique s'est paupérisé, mais la splendeur de son architecture demeure."
     },
     {
         "code": "03219",
         "name": "Notre-Dame",
-        "text": "Each enemy at Notre-Dame gets -1 fight and +1 evade.\n[action]: Test [willpower] (6). If you succeed, either place 1 doom on the current agenda, or remove 1 doom from the current agenda. (Group limit once per game.)",
+        "text": "Chaque ennemi dans Notre-Dame perd -1 combat et gagne +1 évasion.\n[action]: Effectuez un test de [willpower] (6). En cas de réussite, soit vous placez une fatalité sur l'intrigue en cours, soit vous retirez 1 fatalité de l'intrigue en cours. (Limite collective d'une fois par partie.)",
         "traits": "Paris. Voie Ferrée.",
-        "back_flavor": "The most famous cathedral in all of Paris, and one of the finest examples of gothic architecture in the world, Notre-Dame de Paris - \"Our Lady of Paris\" - is an icon of the city. Light shines out from its stained glass windows, and you can hear a pipe organ inside blaring a bizarre, chaotic melody."
+        "back_flavor": "Plus célèbre cathédrale de paris et comptant parmi les meilleurs exemples d'architecture gothique du monde, Notre-Dame de Paris est un symbole de la ville. De la lumière brille à travers ses vitraux, et vous entendez le grand orgue diffuser une étrange mélodie chaotique."
     },
     {
         "code": "03220",
-        "name": "Gardens of Luxembourg",
-        "text": "While a [[Byakhee]] enemy is moving, if there is an investigator at Gardens of Luxembourg, that enemy's location is considered to be connected to Gardens of Luxembourg.",
+        "name": "Jardins du Luxembourg",
+        "text": "Tant qu'un ennemi [[Byakhee]] se déplace, s'il y a un investigateur dans les Jardins du Luxembourg, le lieu de cet ennemi est considéré comme connexe aux Jardins du Luxembourg.",
         "traits": "Paris.",
-        "back_flavor": "The gardens of Luxembourg Palace contain hundreds of scattered statues, monuments, and fountains. It would make for a relaxing walk if you hadn’t come here to escape the winged creatures that screech and soar in the dark sky overhead."
+        "back_flavor": "Les Jardins du Palais du Luxembourg recèlent des centaines de statues, de fontaines et de monuments épars. Ce serait un lieu de promenade agréable si vous n'étiez pas poursuivi par des créatures ailées qui hurlent et planent dans le ciel au-dessus de votre tête."
     },
     {
         "code": "03221",
-        "flavor": "…the point from which it would strike was his infernal eyes. – Robert W. Chambers, \"In the Court of the Dragon,\" <u>The King in Yellow</u>",
-        "name": "The Organist",
-        "subname": "Hopeless, I Defied Him",
-        "text": "Chasseur. Cannot be damaged.\n<b>Forced</b> - After The Organist moves from the hunter keyword, if it is unengaged: Resolve its hunter keyword again. The Organist cannot attack this phase. (Limit once per round).",
+        "flavor": "…c'est par ses yeux infernaux qu'elle m'attaquerait. – Robert W. Chambers, « La Cour du Dragon », <u>Le Roi en Jaune</u>",
+        "name": "L'Organiste",
+        "subname": "Désespéré, Je l'ai Défié",
+        "text": "Chasseur. Ne peut pas subir de dégâts.\n<b>Forcé</b> - Après que L'Organiste s'est déplacé grâce au mot-clé Chasseur, s'il n'est pas engagé : résolvez à nouveau son mot-clé Chasseur. L'Organiste ne peut pas attaquer à cette phase. (Limite une fois par round).",
         "traits": "Humanoïde. Avatar. Élite."
     },
     {
         "code": "03221b",
-        "flavor": "I was creeping along, my feet almost refusing to move. – Robert W. Chambers, \"In the Court of the Dragon,\" <u>The King in Yellow</u>",
-        "name": "The Organist",
-        "subname": "Draped in Mystery",
-        "text": "Aloof. Cannot be damaged.\n<b>Forced</b> - At the end of the enemy phase: If The Organist is unengaged, move it 1 location away from the nearest investigator (to a location with no investigators, if possible). If it is engaged, disengage it instead.",
+        "flavor": "Je me traînais avec difficulté, mes pieds refusant presque d'avancer. – Robert W. Chambers, « La Cour du Dragon », <u>Le Roi en Jaune</u>",
+        "name": "L'Organiste",
+        "subname": "Auréolé de Mystères",
+        "text": "Distant. Ne peut pas subir de dégâts.\n<b>Forcé</b> - À la fin de la phase des Ennemis : si L'Organiste n'est pas engagé, déplacez-le de 1 en l'éloignant de l'investigateur le plus proche (vers un lieu sans investigateur, si possible). S'il est engagé, désengagez-le à la place.",
         "traits": "Humanoïde. Avatar. Élite."
     },
     {
         "code": "03222",
-        "flavor": "If you can hear the beating of its leathery wings, it’s already too late.",
-        "name": "Stealthy Byakhee",
-        "text": "Chasseur.\nWhile Stealthy Byakhee is exhausted, it gets -3 fight.",
+        "flavor": "Si vous entenez le battement de ses ailes membraneuses, il est déjà trop tard.",
+        "name": "Byakhee Furtif",
+        "text": "Chasseur.\nTant que le Byakhee Furtif est incliné, il perd -3 combat.",
         "traits": "Monstre. Byakhee."
     },
     {
         "code": "03223",
-        "flavor": "The implication spoils what would otherwise be a lovely sunset.",
-        "name": "Twin Suns",
-        "text": "<b>Revelation</b> - Test [intellect] (4). If you fail, you must either remove 1 doom from the current agenda, or take 1 horror for each point you failed by.",
+        "flavor": "Les implications que cela suscitegâchent ce qui pourrait être un magnifique coucher de soleil.",
+        "name": "Soleils Jumeaux",
+        "text": "<b>Révélation</b> - Effectuez un test de [intellect] (4). En cas d'échec, soit vous retirez une fatalité de l'intrigue en cours, soit vous subissez 1 horreur pour chaque point manquant.",
         "traits": "Présage."
     },
     {
         "code": "03224",
-        "name": "Deadly Fate",
-        "text": "<b>Revelation</b> - Test [willpower] (3). If you fail, discard cards from the top of the encounter deck until an enemy is discarded. You must either draw that enemy, or that enemy attacks you <i>(from the discard pile)</i>. If no enemy is discarded, take 1 horror instead.",
+        "name": "Destin Funeste",
+        "text": "<b>Révélation</b> - Effectuez un test de [willpower] (3). En cas d'échec, défaussez des cartes du dessus du deck de Rencontre jusqu'à ce qu'un ennemi soit défaussé. Soit vous piochez cet ennemi, soit il vous attaque <i>(depuis la pile de défausse)</i>. Si aucun ennemi est défaussé, subissez 1 horreur à la place.",
         "traits": "Présage."
     },
     {
         "code": "03225",
-        "name": "Torturous Chords",
-        "text": "<b>Revelation</b> - Test [willpower] (5). If you fail, put Torturous Chords into play in your threat area, with 1 resource on it for each point you failed by.\nEach time you play a card, increase the cost of that card by 1 and remove 1 resource from Torturous Chords.\nIf Torturous Chords has no resources, discard it.",
+        "name": "Accords Barbares",
+        "text": "<b>Révélation</b> - Effectuez un test de [willpower] (5). En cas d'échec, mettez Accords Barbares en jeu dans votre zone de menace, avec 1 ressource dessus pour chaque point manquant.\nChaque fois que vous jouez une carte, augmentez de 1 son coût et retirez 1 ressource d'Accords Barbares.\nSi la carte Accords Barbares n'a aucune ressource, défaussez-là.",
         "traits": "Sortilège. Terreur."
     },
     {
