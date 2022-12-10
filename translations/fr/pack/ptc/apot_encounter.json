@@ -211,8 +211,8 @@
     },
     {
         "code": "03226",
-        "name": "Frozen in Fear",
-        "text": "<b>Revelation</b> - Put Frozen in Fear into play in your threat area.\nThe first time you perform one of the following actions (move, fight, or evade) each round, it costs 1 additional action.\n<b>Forced</b> - At the end of your turn: Test [willpower] (3). If you succeed, discard Frozen in Fear.",
+        "name": "Paralysé par la Peur",
+        "text": "<b>Révélation</b> - Mettez Paralysé par la Peur Frozen en jeu dans votre zone de menace.\nLa première fois que vous effectuez l'une des actions suivantes à chaque round (se déplacer, combattre, ou échapper à), cela coûte 1 action supplémentaire.\n<b>Forcé</b> - À la fin de votre tour : effectuez un test de [willpower] (3). En cas de réussite, défaussez Paralysé par la Peur.",
         "traits": "Terreur."
     },
     {
