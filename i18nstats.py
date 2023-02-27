@@ -278,8 +278,6 @@ def compare_translations(args, locale, en_file_path):
 
     stats = i18nStats(locale, en_file_path)
     stats.total = total
-    stats.translated = 0
-    stats.untranslated = {}
 
     i18n_file_path = locale.resolvePath(en_file_path)
     i18n_dict, total = load_translatable_dict(args, i18n_file_path, True)
