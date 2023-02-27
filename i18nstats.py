@@ -130,6 +130,8 @@ def parse_commandline():
     argparser.add_argument("-l", "--languages", default=None, help=("comma-separated list of languages to process (default: all languages)"))
     argparser.add_argument("-g", "--group-by", default="file", help=("whether to gather stats per-file or per-card"))
     argparser.add_argument("-s", "--hide-completed", action="store_true", help="whether to show stats for fully translated files")
+    argparser.add_argument("--show-untranslated", action="store_true", help="whether to show untranslated strings as json")
+    argparser.add_argument("--show-missing", action="store_true", help="whether to show cards missing from file as json")
     argparser.add_argument("i18n_files", nargs="*", default=None, help=("list of json files to process (default: all files for the selected languages)"))
 
     args = argparser.parse_args()
@@ -364,11 +366,11 @@ def compare_translations(args, locale, en_file_path):
         card_stats.missing = True
         stats.add_missing_card_stats(card_stats)
 
-    if len(stats.missing) != 0:
-        verbose_print(args, "missing json:\n%s\n"%format_json(flatten_i18n_dict(stats.missing)), 1)
+    if args.show_missing and len(stats.missing) != 0:
+        verbose_print(args, "missing json:\n%s\n"%format_json(flatten_i18n_dict(stats.missing)), 0)
 
-    if len(stats.untranslated) != 0:
-        verbose_print(args, "untranslated json:\n%s\n"%format_json(flatten_i18n_dict(stats.untranslated)), 1)
+    if args.show_untranslated and len(stats.untranslated) != 0:
+        verbose_print(args, "untranslated json:\n%s\n"%format_json(flatten_i18n_dict(stats.untranslated)), 0)
 
     return stats
 
