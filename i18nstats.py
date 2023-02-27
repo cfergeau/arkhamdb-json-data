@@ -128,6 +128,7 @@ def parse_commandline():
     argparser.add_argument("-p", "--pack_path", default=None, help=("pack directory of JSON repo (default: BASE_PATH/%s/)" % PACK_DIR))
     argparser.add_argument("-c", "--schema_path", default=None, help=("schema directory of JSON repo (default: BASE_PATH/%s/" % SCHEMA_DIR))
     argparser.add_argument("-l", "--languages", default=None, help=("comma-separated list of languages to process (default: all languages)"))
+    argparser.add_argument("-s", "--hide-completed", action="store_true", help="whether to show stats for fully translated files")
     argparser.add_argument("i18n_files", nargs="*", default=None, help=("list of json files to process (default: all files for the selected languages)"))
 
     args = argparser.parse_args()
@@ -173,14 +174,13 @@ class i18nStats(object):
 
     def print(self, args):
         verbose_print(args, "%s: %s\n"%(self.locale.name, self.en_file_name), 0)
-        verbose_print(args, "%s: translated: %d untranslated: %d\n"%(self.locale, self.translated, len(self.untranslated)), 0)
-        if len(self.untranslated) != 0:
-            verbose_print(args, "%s: untranslated: %s\n"%(self.locale, self.untranslated), 1)
+        if not args.hide_completed or len(self.untranslated) != 0:
+            verbose_print(args, "%s: translated: %d untranslated: %d\n"%(self.locale, self.translated, len(self.untranslated)), 0)
         if len (self.missing) != 0:
             verbose_print(args, "%s: missing from translated file: %s\n"%(self.locale, self.missing), 0)
 
     def print_short(self, args):
-        if self.translated == self.total:
+        if self.translated == self.total and args.hide_completed:
             return
         path = self.locale.resolvePath(self.en_file_name)
         verbose_print(args, "%s (%d / %d)\n"%(path, self.translated, self.total), 0)
