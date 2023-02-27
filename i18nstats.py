@@ -171,6 +171,7 @@ class i18nStats(object):
         self.translated = 0
         self.untranslated = {}
         self.missing = {}
+        self.card_stats = {}
 
     def print(self, args):
         verbose_print(args, "%s: %s\n"%(self.locale.name, self.en_file_name), 0)
@@ -185,7 +186,19 @@ class i18nStats(object):
         path = self.locale.resolvePath(self.en_file_name)
         verbose_print(args, "%s (%d / %d)\n"%(path, self.translated, self.total), 0)
 
+    def add_card_stats(self, card_stats, args):
+        self.translated += card_stats.translated
+        if len(card_stats.untranslated) != 0:
+            self.untranslated[card_stats.code] = card_stats.untranslated
+            #verbose_print(args, "%s:%s: %s are not translated\n"%(locale_name, card_stats.code, untranslated), 1)
+        self.card_stats[card_stats.code] = card_stats
 
+class cardStats(object):
+    def __init__(self, code):
+        self.code = code
+        self.translated = 0
+        self.untranslated = {}
+        self.total = 0
 
 def get_translatable_strings(args, item, file_path="", warn_if_extra=True):
     translatable_fields = {'flavor', 'name', 'subname', 'customization_text', 'customization_change', 'text', 'traits', 'back_name', 'back_flavor', 'back_text', 'back_traits', 'slot'}
@@ -294,21 +307,20 @@ def compare_translations(args, locale, en_file_path):
 
         untranslated = {}
         en_strings = en_dict[code]
+        card_stats = cardStats(code)
+        card_stats.total = len(en_strings)
         for field, value in en_strings.items():
             if field in i18n_strings:
                 if should_ignore(ignore_dict, code, field, i18n_strings[field]):
                     verbose_print(args, "ignoring %s %s %s\n"%(code, field, i18n_strings[field]), 2)
-                    stats.translated+=1
+                    card_stats.translated+=1
                 elif value == i18n_strings[field] and value != "":
-                    untranslated[field] = value
+                    card_stats.untranslated[field] = value
                 else:
-                    stats.translated+=1
+                    card_stats.translated+=1
             else:
-                untranslated[field] = value
-        if len(untranslated) > 0:
-            stats.untranslated[code] = untranslated
-            #verbose_print(args, "%s:%s: %s are not translated\n"%(locale_name, code, untranslated), 1)
-        #del en_dict[code]
+                card_stats.untranslated[field] = value
+        stats.add_card_stats(card_stats, args)
 
         en_dict.pop(code)
 
