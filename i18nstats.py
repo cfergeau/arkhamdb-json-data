@@ -228,8 +228,9 @@ class i18nStats(object):
             self.cards_partially_translated += 1
 
 class cardStats(object):
-    def __init__(self, code):
+    def __init__(self, code, metadata):
         self.code = code
+        self.metadata = metadata
         self.translated = 0
         self.untranslated = {}
         self.missing = False
@@ -262,6 +263,37 @@ def check_extra_i18n_codes(args, i18n_dict, en_dict, file_path):
     extra_i18n = i18n_dict.keys() - en_dict.keys()
     if len(extra_i18n) != 0:
         verbose_print(args, "WARN:check_extra_i18n_codes: extra entries in %s: %s\n"%(file_path, extra_i18n), 0)
+
+def get_metadata(args, item):
+    metadata = {}
+    for field, value in item.items():
+        if field.endswith("_code"):
+            metadata[field] = value
+    return metadata
+
+def load_metadata_dict(args, file_path):
+    if check_file_access(file_path):
+        file_data = load_json_file(args, file_path)
+    else:
+        verbose_print(args, "WARN: could not load %s\n"%file_path, 1)
+        return {}, 0
+
+    metadatas = {}
+    for c in file_data:
+        code = c.get("code")
+
+        if code in metadatas:
+            verbose_print(args, "WARN: file already has an entry for %s\n"%code, 0)
+            continue
+
+        metadata = get_metadata(args, c)
+        metadata["file"] = file_path
+        #verbose_print(args, "%s: len(translatable)=%d\n"%(en_file_path, len(translatable)), 0)
+        metadatas[c.get("code")] = metadata
+
+        #verbose_print(args, "got code %s\n"% c.get("code"), 0)
+
+    return metadatas
 
 def load_translatable_dict(args, file_path, warn_if_extra=False):
     if check_file_access(file_path):
@@ -320,9 +352,10 @@ def compare_translations(args, locale, en_file_path):
     en_dict = {}
     total = 0
     en_dict, total = load_translatable_dict(args, en_file_path)
-
     if total == 0:
         verbose_print(args, "%s: no translatable strings in %s\n"%(locale.name, en_file_path), 1)
+
+    metadata_dict = load_metadata_dict(args, en_file_path)
 
     stats = i18nStats(locale, en_file_path)
     stats.total = total
@@ -342,7 +375,8 @@ def compare_translations(args, locale, en_file_path):
 
         untranslated = {}
         en_strings = en_dict[code]
-        card_stats = cardStats(code)
+        metadata = metadata_dict[code]
+        card_stats = cardStats(code, metadata)
         card_stats.total = len(en_strings)
         for field, value in en_strings.items():
             if field in i18n_strings:
@@ -360,7 +394,8 @@ def compare_translations(args, locale, en_file_path):
         en_dict.pop(code)
 
     for code, en_strings in en_dict.items():
-        card_stats = cardStats(code)
+        metadata = metadata_dict[code]
+        card_stats = cardStats(code, metadata)
         card_stats.total = len(en_strings)
         card_stats.untranslated = en_strings
         card_stats.missing = True
