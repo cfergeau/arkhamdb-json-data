@@ -178,6 +178,7 @@ class i18nStats(object):
         self.cards_translated = 0
         self.cards_untranslated = 0
         self.cards_partially_translated = 0
+        self.total = 0
 
     def print(self, args):
         verbose_print(args, "%s: %s\n"%(self.locale.name, self.en_file_name), 0)
@@ -209,12 +210,14 @@ class i18nStats(object):
         self.card_stats[card_stats.code] = card_stats
         self.missing[card_stats.code] = card_stats.untranslated
         self.cards_untranslated += 1
+        self.total += card_stats.total
 
     def add_card_stats(self, card_stats):
         self.card_stats[card_stats.code] = card_stats
 
         # update file stats
         self.translated += card_stats.translated
+        self.total += card_stats.total
         if len(card_stats.untranslated) != 0:
             self.untranslated[card_stats.code] = card_stats.untranslated
             #verbose_print(args, "%s:%s: %s are not translated\n"%(locale_name, card_stats.code, untranslated), 1)
@@ -300,12 +303,11 @@ def load_translatable_dict(args, file_path, warn_if_extra=False):
         file_data = load_json_file(args, file_path)
     else:
         verbose_print(args, "WARN: could not load %s\n"%file_path, 1)
-        return {}, 0
+        return {}
 
     check_duplicate_codes(args, file_data, file_path)
 
     translatables = {}
-    total = 0
     found_extra = False
     for c in file_data:
         code = c.get("code")
@@ -320,13 +322,12 @@ def load_translatable_dict(args, file_path, warn_if_extra=False):
         if len(translatable) > 0:
             translatables[c.get("code")] = translatable
 
-        total += len(translatable)
         #verbose_print(args, "got code %s\n"% c.get("code"), 0)
 
     if found_extra and warn_if_extra:
         verbose_print(args, "json without extra entries:\n%s\n"%format_json(flatten_i18n_dict(translatables)), 1)
 
-    return translatables, total
+    return translatables
 
 def should_ignore(ignore_dict, code, field, value):
     if ignore_dict is None:
@@ -350,23 +351,21 @@ def flatten_i18n_dict(i18n_dict):
 
 def compare_translations(args, locale, en_file_path):
     en_dict = {}
-    total = 0
-    en_dict, total = load_translatable_dict(args, en_file_path)
-    if total == 0:
+    en_dict = load_translatable_dict(args, en_file_path)
+    if len(en_dict) == 0:
         verbose_print(args, "%s: no translatable strings in %s\n"%(locale.name, en_file_path), 1)
 
     metadata_dict = load_metadata_dict(args, en_file_path)
 
     stats = i18nStats(locale, en_file_path)
-    stats.total = total
 
     i18n_file_path = locale.resolvePath(en_file_path)
-    i18n_dict, total = load_translatable_dict(args, i18n_file_path, True)
+    i18n_dict = load_translatable_dict(args, i18n_file_path, True)
 
     check_extra_i18n_codes(args, i18n_dict, en_dict, i18n_file_path)
 
     ignore_file_path = i18n_file_path.removesuffix(".json")+".ignore"
-    ignore_dict, total = load_translatable_dict(args, ignore_file_path)
+    ignore_dict = load_translatable_dict(args, ignore_file_path)
 
     for code, i18n_strings in i18n_dict.items():
         if not code in en_dict:
