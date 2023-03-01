@@ -349,15 +349,23 @@ def flatten_i18n_dict(i18n_dict):
         value["code"] = key
     return list(i18n_dict.values())
 
-def compare_translations(args, locale, en_file_path):
+def file_stats(args, locale, en_file_path):
+    file_stats = i18nStats(locale, en_file_path)
+    for stats in card_stats(args, locale, en_file_path):
+        if stats.missing:
+            file_stats.add_missing_card_stats(stats)
+        else:
+            file_stats.add_card_stats(stats)
+
+    return file_stats
+
+def card_stats(args, locale, en_file_path):
     en_dict = {}
     en_dict = load_translatable_dict(args, en_file_path)
     if len(en_dict) == 0:
         verbose_print(args, "%s: no translatable strings in %s\n"%(locale.name, en_file_path), 1)
 
     metadata_dict = load_metadata_dict(args, en_file_path)
-
-    stats = i18nStats(locale, en_file_path)
 
     i18n_file_path = locale.resolvePath(en_file_path)
     i18n_dict = load_translatable_dict(args, i18n_file_path, True)
@@ -388,9 +396,9 @@ def compare_translations(args, locale, en_file_path):
                     card_stats.translated+=1
             else:
                 card_stats.untranslated[field] = value
-        stats.add_card_stats(card_stats)
-
         en_dict.pop(code)
+
+        yield card_stats
 
     for code, en_strings in en_dict.items():
         metadata = metadata_dict[code]
@@ -398,15 +406,7 @@ def compare_translations(args, locale, en_file_path):
         card_stats.total = len(en_strings)
         card_stats.untranslated = en_strings
         card_stats.missing = True
-        stats.add_missing_card_stats(card_stats)
-
-    if args.show_missing and len(stats.missing) != 0:
-        verbose_print(args, "missing json:\n%s\n"%format_json(flatten_i18n_dict(stats.missing)), 0)
-
-    if args.show_untranslated and len(stats.untranslated) != 0:
-        verbose_print(args, "untranslated json:\n%s\n"%format_json(flatten_i18n_dict(stats.untranslated)), 0)
-
-    return stats
+        yield card_stats
 
 def all_files(args):
     # This does not use args.pack_dir because it is an absolute path while this
@@ -442,9 +442,15 @@ def all_locales(args, files):
 
 def check_translations(args, locale, fileIterator):
     for en_file_path in fileIterator:
-            stats = compare_translations(args, locale, en_file_path)
-            if not stats is None:
-                stats.print_short(args)
+        stats = file_stats(args, locale, en_file_path)
+        if not stats is None:
+            stats.print_short(args)
+
+        if args.show_missing and len(stats.missing) != 0:
+            verbose_print(args, "missing json:\n%s\n"%format_json(flatten_i18n_dict(stats.missing)), 0)
+
+        if args.show_untranslated and len(stats.untranslated) != 0:
+            verbose_print(args, "untranslated json:\n%s\n"%format_json(flatten_i18n_dict(stats.untranslated)), 0)
 
 def check_all_locales(args, fileIterator):
     langs = get_languages(args)
