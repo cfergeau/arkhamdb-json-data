@@ -128,6 +128,7 @@ def parse_commandline():
     argparser.add_argument("-p", "--pack_path", default=None, help=("pack directory of JSON repo (default: BASE_PATH/%s/)" % PACK_DIR))
     argparser.add_argument("-c", "--schema_path", default=None, help=("schema directory of JSON repo (default: BASE_PATH/%s/" % SCHEMA_DIR))
     argparser.add_argument("-l", "--languages", default=None, help=("comma-separated list of languages to process (default: all languages)"))
+    argparser.add_argument("-g", "--group-by", default="file", help=("whether to gather stats per-file or per-card"))
     argparser.add_argument("-s", "--hide-completed", action="store_true", help="whether to show stats for fully translated files")
     argparser.add_argument("i18n_files", nargs="*", default=None, help=("list of json files to process (default: all files for the selected languages)"))
 
@@ -172,6 +173,9 @@ class i18nStats(object):
         self.untranslated = {}
         self.missing = {}
         self.card_stats = {}
+        self.cards_translated = 0
+        self.cards_untranslated = 0
+        self.cards_partially_translated = 0
 
     def print(self, args):
         verbose_print(args, "%s: %s\n"%(self.locale.name, self.en_file_name), 0)
@@ -184,20 +188,49 @@ class i18nStats(object):
         if self.translated == self.total and args.hide_completed:
             return
         path = self.locale.resolvePath(self.en_file_name)
-        verbose_print(args, "%s (%d / %d)\n"%(path, self.translated, self.total), 0)
+        if args.group_by == "cards":
+            verbose_print(args, "CARDS %s (%d / %d)"%(path, self.cards_translated, len(self.card_stats)), 0)
+            if self.cards_untranslated != 0 or self.cards_partially_translated != 0:
+                verbose_print(args, " (", 0)
+                if self.cards_untranslated != 0:
+                    verbose_print(args, "%d untranslated"%self.cards_untranslated, 0)
+                    if self.cards_partially_translated != 0:
+                        verbose_print(args, " ", 0)
+                if self.cards_partially_translated != 0:
+                    verbose_print(args, "%d partially translated"%self.cards_partially_translated, 0)
+                verbose_print(args, ")", 0)
+            verbose_print(args, "\n", 0)
+        else:
+            verbose_print(args, "%s (%d / %d)\n"%(path, self.translated, self.total), 0)
 
-    def add_card_stats(self, card_stats, args):
+    def add_missing_card_stats(self, card_stats):
+        self.card_stats[card_stats.code] = card_stats
+        self.missing[card_stats.code] = card_stats.untranslated
+        self.cards_untranslated += 1
+
+    def add_card_stats(self, card_stats):
+        self.card_stats[card_stats.code] = card_stats
+
+        # update file stats
         self.translated += card_stats.translated
         if len(card_stats.untranslated) != 0:
             self.untranslated[card_stats.code] = card_stats.untranslated
             #verbose_print(args, "%s:%s: %s are not translated\n"%(locale_name, card_stats.code, untranslated), 1)
-        self.card_stats[card_stats.code] = card_stats
+
+        # update card stats
+        if card_stats.total == card_stats.translated:
+            self.cards_translated += 1
+        elif card_stats.translated == 0:
+            self.cards_untranslated += 1
+        else:
+            self.cards_partially_translated += 1
 
 class cardStats(object):
     def __init__(self, code):
         self.code = code
         self.translated = 0
         self.untranslated = {}
+        self.missing = False
         self.total = 0
 
 def get_translatable_strings(args, item, file_path="", warn_if_extra=True):
@@ -320,11 +353,17 @@ def compare_translations(args, locale, en_file_path):
                     card_stats.translated+=1
             else:
                 card_stats.untranslated[field] = value
-        stats.add_card_stats(card_stats, args)
+        stats.add_card_stats(card_stats)
 
         en_dict.pop(code)
 
-    stats.missing = en_dict
+    for code, en_strings in en_dict.items():
+        card_stats = cardStats(code)
+        card_stats.total = len(en_strings)
+        card_stats.untranslated = en_strings
+        card_stats.missing = True
+        stats.add_missing_card_stats(card_stats)
+
     if len(stats.missing) != 0:
         verbose_print(args, "missing json:\n%s\n"%format_json(flatten_i18n_dict(stats.missing)), 1)
 
