@@ -15,5 +15,41 @@
 		"code": "05049",
 		"name": "Penny White",
 		"traits": "Assistant."
-	}
+	},
+        {
+                "code": "05057",
+                "name": "Anette Mason"
+        },
+        {
+                "code": "05078",
+                "traits": "Spectral."
+        },
+        {
+                "code": "05079",
+                "traits": "Spectral."
+        },
+        {
+                "code": "05080",
+                "traits": "Spectral."
+        },
+        {
+                "code": "05081",
+                "traits": "Spectral."
+        },
+        {
+                "code": "05082",
+                "traits": "Spectral."
+        },
+        {
+                "code": "05083",
+                "traits": "Spectral."
+        },
+        {
+                "code": "05084",
+                "traits": "Spectral."
+        },
+        {
+                "code": "05085",
+                "name": "Josef Meiger"
+        }
 ]
