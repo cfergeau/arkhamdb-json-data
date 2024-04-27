@@ -2,7 +2,7 @@
     {
         "code": "05186",
         "name": "Thompson .45",
-        "text": "Utilisations (5 munitions).\nLes munitions dépensées depuis la \nThompson .45 sont placées dans votre réserve de ressources en tant que ressources.\n[action] Dépensez 1 munition : <b>Combattre</b>. Vous gagnez +2 [combat] et infligez +1 dégât pour cette attaque.",
+        "text": "Utilisations (5 munitions).\nLes munitions dépensées depuis la Thompson .45 sont placées dans votre réserve de ressources en tant que ressource.\n[action] Dépensez 1 munition : <b>Combattre</b>. Vous gagnez +2 [combat] et infligez +1 dégât pour cette attaque.",
         "traits": "Objet. Arme. Arme à feu. Illicite.",
         "slot": "Main x2"
     },
@@ -55,7 +55,7 @@
     },
     {
         "code": "05194",
-        "flavor": "Nous aurions dû le renvoyer immédiatement.\nMais comment aurions-nous pu savoir ?",
+        "flavor": "Nous aurions dû le renvoyer immédiatement.\nMais comment aurions nous pu savoir ?",
         "name": "Totem Macabre",
         "text": "[reaction] Après que vous avez attribué une carte à un test de compétence, inclinez le Totem Macabre : la carte attribuée gagne une occurrence supplémentaire de l'une de ses icônes de compétence de votre choix. Si le test est réussi, l'investigateur qui effectuait le test pioche 1 carte.",
         "traits": "Objet. Charme. Maudit",
@@ -63,10 +63,10 @@
     },
     {
         "code": "05195",
-        "flavor": "Nous aurions dû le renvoyer immédiatement.\nMais comment aurions-nous pu savoir ?",
+        "flavor": "Nous aurions dû le renvoyer immédiatement.\nMais comment aurions nous pu savoir ?",
         "name": "Totem Macabre",
         "text": "[reaction] Après que vous avez attribué une carte à un test de compétence, inclinez le Totem Macabre : la carte attribuée gagne une occurrence supplémentaire de l'une de ses icônes de compétence de votre choix. Si le test échoue, renvoyez dans votre main la carte attribuée.",
-        "traits": "Objet. Charme. Béni",
+        "traits": "Objet. Charme. Béni.",
         "slot": "Accessoire"
     },
     {

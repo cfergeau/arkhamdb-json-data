@@ -58,7 +58,7 @@
     },
     {
         "code": "05204",
-        "flavor": "Le quartier général de la Loge du Crépuscule d'Argent est un sompteux manoir victorien situé à French Hill. Il surplombe la ville. De la lumière filtre à travers ses imposantes portes vitrées.",
+        "flavor": "Le quartier général de la Loge du Crépuscule d'Argent est un somptueux manoir victorien situé à French Hill. Il surplombe la ville. De la lumière filtre à travers ses imposantes portes vitrées.",
         "name": "Portes de la Loge",
         "subname": "Nous Vous Attendions",
         "text": "Les ennemis ne peuvent pas être générés dans les Portes de la Loge.\n[action] : <b>Abandon.</b> Après réflexion, venir ici était peut-être une mauvaise idée.",
@@ -67,7 +67,7 @@
     },
     {
         "code": "05205",
-        "flavor": "Le quartier général de la Loge du Crépuscule d'Argent est un sompteux manoir victorien situé à French Hill. Il surplombe la ville. De la lumière filtre à travers ses imposantes portes vitrées.",
+        "flavor": "Le quartier général de la Loge du Crépuscule d'Argent est un somptueux manoir victorien situé à French Hill. Il surplombe la ville. De la lumière filtre à travers ses imposantes portes vitrées.",
         "name": "Portes de la Loge",
         "subname": "Réservé aux Membres",
         "text": "Les ennemis ne peuvent pas être générés dans les Portes de la Loge.\n[action] : <b>Abandon.</b> Après réflexion, venir ici était peut-être une mauvaise idée.",
@@ -81,7 +81,7 @@
         "subname": "Nous Vous Attendions",
         "traits": "Loge.",
         "back_flavor": "L'entrée principale du manoir de la Loge est gardée par deux hommes en imperméable qui vous font signe de la tête lorsque vous faites mine d'approcher.",
-        "back_text": "L'entrée menant à la Loge du Crépuscule d'Argent est gardée. Vous ne pouvez pas entrer dans le Vestibule.\nLes Portes de la Loge gagnent : « [action]: <b>Discussion.</b> Les gardes qui vous ont déjà vu dans la propriété de Meiger vous reconnaissent et vous laissent passer. Révélez le Vestibule. »"
+        "back_text": "L'entrée menant à la Loge du Crépuscule d'Argent est gardée. Vous ne pouvez pas entrer dans le Vestibule.\nLes Portes de la Loge gagnent : « [action] : <b>Discussion.</b> Les gardes qui vous ont déjà vu dans la propriété de Meiger vous reconnaissent et vous laissent passer. Révélez le Vestibule. »"
     },
     {
         "code": "05207",
@@ -103,12 +103,12 @@
     },
     {
         "code": "05209",
-        "flavor": "Vous vous glissez dans la cave du bâtiment par une fenêtre déverrouillée. La cave de la Loge ne contient qu'un casier à vins et quelques tonneaux non marqués. Une porte en acier trempé bloque le chemin qui mène plus profondément dans le sous-sol. Vous n'avez presque pas envie de savoir ce qui se trouve derrière. Presque.",
+        "flavor": "Vous vous glissez dans la cave du bâtiment par une fenêtre déverrouillée. Elle ne contient qu'un casier à vins et quelques tonneaux non marqués. Une porte en acier trempé bloque le chemin qui mène plus profondément dans le sous-sol. Vous n'avez presque pas envie de savoir ce qui se trouve derrière. Presque.",
         "name": "Cave de la Loge",
         "subname": "Réservé aux Membres",
         "traits": "Loge.",
         "back_flavor": "Plusieurs fenêtres verrouillées au niveau du sol révèlent l'existence d'une cave, actuellement plongée dans l'obscurité.",
-        "back_text": "L'entrée de service de la Loge du Crépuscule d'Argent est cachée. Vous ne pouvez pas entrer dans la Cave de la Loge.\nLes Portes de la Loge gagnent : « [action] Les investigateurs dans les Portes de la Loge dépensent collectivement 1 [per_investigator] indice : révélez la Cave do la Loge. »"
+        "back_text": "L'entrée de service de la Loge du Crépuscule d'Argent est cachée. Vous ne pouvez pas entrer dans la Cave de la Loge.\nLes Portes de la Loge gagnent : « [action] Les investigateurs dans les Portes de la Loge dépensent collectivement 1[per_investigator] indice : révélez la Cave de la Loge. »"
     },
     {
         "code": "05210",
@@ -125,11 +125,11 @@
         "text": "<b>Forcé</b> - Après que la Chambre Forte a été révélée : prenez au hasard 1 des clés mises de côté et placez-la dessus.",
         "traits": "Loge.",
         "back_flavor": "Une lourde porte de bois avec une fenêtre à barreaux semble mener dans une petite chambre forte. Elle est fermée hermétiquement pour protéger son contenu des regards indiscrets.",
-        "back_text": "La porte menant la Chambre Forte est verrouillée. Vous ne pouvez pas entrer dans la Chambre Forte à moins que vous ne contrôliez la clé [elder_thing]."
+        "back_text": "La porte menant à la Chambre Forte est verrouillée. Vous ne pouvez pas entrer dans la Chambre Forte à moins que vous ne contrôliez la clé [elder_thing]."
     },
     {
         "code": "05212",
-        "flavor": "Même la bibliothèque de la Loge est arrangée de façon à refléter la richesse et le pouvoir de l'organisation. Les immenses étagères croulent sous des centaines de livres.",
+        "flavor": "Même la bibliothèque de la Loge est agencée de manière à refléter la richesse et le pouvoir de l'organisation. Les immenses étagères croulent sous des centaines de livres.",
         "name": "Bibliothèque",
         "text": "Si vous contrôlez la clé [tablet], la Bibliothèque perd -3 de valeur occulte tant que vous enquêtez dans ce lieu.",
         "traits": "Loge.",
@@ -146,7 +146,7 @@
     },
     {
         "code": "05214",
-        "flavor": "Au centre de la pièce se trouve un autel en pierre taillée. Du sang coule depuis l'autel jusqu'à une série de sillons creusés dans la mosaïque du sol.",
+        "flavor": "Au centre de la pièce se trouve un autel de pierre taillée. Du sang coule depuis l'autel jusqu'à une série de sillons creusés dans la mosaïque du sol.",
         "name": "Salle de Cérémonie",
         "text": "<b>Forcé</b> - Quand le round se termine : chaque investigateur et chaque soutien [[Allié]] dans la Salle de Cérémonie subit 1 horreur directe. Annulez cet effet si un investigateur dans la Salle de Cérémonie contrôle la clé [skull].",
         "traits": "Loge. Sanctuaire.",
@@ -156,14 +156,14 @@
     {
         "code": "05215",
         "name": "Cellules de Rétention",
-        "text": "<b>Forcé</b> - Après que les Cellules de Rétentions ont été révélées : cherchez un ennemi [[Cultiste]] dans le deck Rencontre ou dans la pile de défausse Rencontre et générez-le dans les Cellules de Rétention. Mélangez le deck Rencontre.",
+        "text": "<b>Forcé</b> - Après que les Cellules de Rétention ont été révélées : cherchez un ennemi [[Cultiste]] dans le deck Rencontre ou dans la pile de défausse Rencontre et générez-le dans les Cellules de Rétention. Mélangez le deck Rencontre.",
         "traits": "Loge. Sanctuaire.",
         "back_name": "Porte du Sanctuaire",
-        "back_flavor": "Derrière une arche en pierre se trouve une porte en fer sans inscription. Elle semble vous narguer avec ses secrets et ses vérités dissimulées."
+        "back_flavor": "Derrière une arche de pierre se trouve une porte en fer sans inscription. Elle semble vous narguer avec ses secrets et ses vérités dissimulées."
     },
     {
         "code": "05216",
-        "flavor": "De l'autre côté de la pièce, sur une estrade de bois, se trouve une tribune. Plusieurs rangées de sièges cossus font face à l'estrade. Vous n'avez jamais entendu parler d'une telle salle de réunion au sein de la Loge ; ce doit être un lieu réservé aux membres les plus fiables et les plus dévoués.",
+        "flavor": "De l'autre côté de la pièce, sur une estrade en bois, se trouve une tribune. Plusieurs rangées de sièges cossus font face à l'estrade. Vous n'avez jamais entendu parler d'une telle salle de réunion au sein de la Loge ; ce doit être un lieu réservé aux membres les plus fiables et les plus dévoués.",
         "name": "Sanctuaire Intérieur",
         "text": "<b>Forcé</b> - Après que le Sanctuaire Intérieur a été révélé : prenez au hasard 1 des clés mises de côté et placez-la dessus.",
         "traits": "Loge. Sanctuaire.",
@@ -174,7 +174,7 @@
         "code": "05217",
         "name": "Nathan Wick",
         "subname": "Maître de l'Initiation",
-        "text": "Riposte.\n[action]: <b>Discussion.</b> Effectuez un test de [willpower] (3) pour persuader Nathan de vous laisser trouver un autre moyen. En cas de réussite, placez 1 ressource sur Nathan Wick. Ensuite, s'il y a 1 [per_investigator] ressources sur lui, ajoutez-le à la pile de victoire. En cas d'échec, Nathan Wick vous attaque.",
+        "text": "Riposte.\n[action] : <b>Discussion.</b> Effectuez un test de [willpower] (3) pour persuader Nathan de vous laisser trouver un autre moyen. En cas de réussite, placez 1 ressource sur Nathan Wick. Ensuite, s'il y a 1[per_investigator] ressource sur lui, ajoutez-le à la pile de victoire. En cas d'échec, Nathan Wick vous attaque.",
         "traits": "Humanoïde. Cultiste. Crépuscule d'Argent. Élite."
     },
     {
@@ -198,21 +198,21 @@
     },
     {
         "code": "05220",
-        "name": "Bête invoquée",
+        "name": "Bête Invoquée",
         "subname": "Gardienne du Piège",
-        "text": "Riposte. Chasseur.\nLa Bête Invoquée gagne +1 combat, +1 évasion, +1 dégât et +1 horreur pour chaque groupe de 2 fatalités en jeu.\n<b>Forcé</b> - Au début de la phase des Ennemis : la Bête Invoquée vainc chaque ennemi [[Humanoïde]] dans son lieu. Déplacez toutes les fatalités de chacun de ces ennemis vers la Bête Invoquée.\n<b>Objectif</b> - Si cet ennemi est vaincu, <b>(→C3)</b>.",
+        "text": "Riposte. Chasseur.\nLa Bête Invoquée gagne +1 combat, +1 évasion, +1 dégât et +1 horreur pour chaque groupe de 2 fatalités en jeu.\n<b>Forcé</b> - Au début de la phase des Ennemis : la Bête Invoquée vainc chaque ennemi [[Humanoïde]] dans son lieu. Déplacez toutes les fatalités de chacun de ces ennemis vers la Bête Invoquée.\n<b>Objectif</b> - Si cet ennemi est vaincu, <b>(→C3).</b>",
         "traits": "Monstre. Crépuscule d'Argent. Élite."
     },
     {
         "code": "05221",
         "name": "Chevalier du Cercle Restreint",
-        "text": "<b>Génération</b> - N'importe quel lieu connexe au vôtre.\n<b>Proie</b> - Le plus de clés ([skull]/[cultist]/[tablet]/[elder_thing]) contrôlées.\nAlerte. Distant. Chasseur.\n<b>Forcé</b> - Après que vous êtes entré dans le lieu du Chevalier du Cercle Restreint (et vice-versa) : effectuez un test de [agility] (4). En cas d'échec, le Chevalier du Cercle Restreint vous engage.",
+        "text": "<b>Génération</b> - N'importe quel lieu connexe au vôtre.\n<b>Proie</b> - Le plus de clés ([skull]/[cultist]/[tablet]/[elder_thing]) contrôlées.\nAlerte. Distant. Chasseur.\n<b>Forcé</b> - Après que vous êtes entré dans le lieu du Chevalier du Cercle Restreint (et vice versa) : effectuez un test de [agility] (4). En cas d'échec, le Chevalier du Cercle Restreint vous engage.",
         "traits": "Humanoïde. Cultiste. Crépuscule d'Argent."
     },
     {
         "code": "05222",
         "name": "Chevalier du Vide Extérieur",
-        "text": "<b>Génération</b> - N'importe quel lieu connexe au vôtre.\nDistant. Péril. Riposte.\n<b>Révélation</b> - Après que le Chevalier du Vide Extérieur a été généré, placez soit 1, soit 2 fatalités sur lui.\n[action] : <b>Discussion.</b> Effectuez un test de [willpower] ou [intellect] (4). En cas de réussite, prenez le contrôle de 1 fatalité sur le Chevalier du Vide Extérieur et retournez-la sur sa face indice. En cas d'échec, le Chevalier du Vide Extérieur vous attaque.",
+        "text": "<b>Génération</b> - N'importe quel lieu connexe au vôtre.\nDistant. Péril. Riposte.\n<b>Révélation</b> - Après que le Chevalier du Vide Extérieur a été généré, placez soit 1, soit 2 fatalités sur lui.\n[action] : <b>Discussion.</b> Effectuez un test de [willpower] ou de [intellect] (4). En cas de réussite, prenez le contrôle de 1 fatalité du Chevalier du Vide Extérieur et retournez-la sur sa face indice. En cas d'échec, le Chevalier du Vide Extérieur vous attaque.",
         "traits": "Humanoïde. Cultiste. Crépuscule d'Argent."
     },
     {
@@ -251,7 +251,7 @@
         "code": "05228",
         "name": "Boîte à Énigme",
         "subname": "Dispositif Mystérieux",
-        "text": "<b>Forcé</b> – Quand vous êtes vaincu : donnez le contrôle de la Boîte à Énigme à un autre investigateur.\n[action] : éteignez un brasero dans votre lieu, inclinez Le Guetteur Spectral ou infligez-lui 5 dégâts s'il est incliné. Cette action ne provoque pas d'attaque d'opportunité de la part du Guetteur Spectral. (Limite collective d'une fois par partie.)",
+        "text": "<b>Forcé</b> - Quand vous êtes vaincu : donnez le contrôle de la Boîte à Énigme à un autre investigateur.\n[action] : éteignez un brasero dans votre lieu, inclinez Le Guetteur Spectral ou infligez-lui 5 dégâts s'il est incliné. Cette action ne provoque pas d'attaque d'opportunité de la part du Guetteur Spectral. (Limite collective d'une fois par partie.)",
         "traits": "Objet. Relique."
     }
 ]
